@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell-App</title>
+    <link rel="icon" href="./assets/icons/fav-icon.svg" type="image/x-icon"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./styles/standart.css">
+    <link rel="stylesheet" href="./styles/assets.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +19,7 @@
                 <img src="./assets/img/main-logo.svg" alt="Logo">
             </div>
             <div>
-                <img src="./assets/img/burger-menu.svg" alt="Menü">
+                <button onclick="openDialog()"><img src="./assets/img/hamburger-menu.svg" alt="Menü"></button>
             </div>
         </section>
     </header>
@@ -25,13 +28,21 @@
         <section class="content-limitation">
 
             <div class="main-image">
-                <img src="./assets/img/hero.jpg" alt="hero-image">
+                
+                    <img src="./assets/img/hero.jpg" alt="hero-image">
+                    <img class="burger-logo" src="./assets/img/burger-logo.svg" alt="Burger Image"> 
             </div>
+
+            <img src="./assets/img/name.png" alt="Order-App name"> 
+            <!-- hier als Text implementieren -->
+
 
         </section>
     </main>
 
     <footer></footer>
+
+    <dialog id="testDialog">huhh</dialog>
 </body>
 
 </html>
