@@ -20,6 +20,7 @@
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
 }
 
 dialog{
@@ -29,10 +30,27 @@ dialog{
     color: white;
 }
 
-.burger-logo{
-    position: absolute;
+h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
 }
 
+.headline{
+    color: #E76C1F;
+    font-family: "Google Sans", sans-serif;
+}
+
+.headline-description{
+    text-align: center;
+    font-family: "Google Sans", sans-serif;
+    color: #363634;
+    font-size: 24px;
+}
+
+.burger-img{
+    height: 200px;
+}
 
 
 
