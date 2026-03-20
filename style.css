@@ -40,30 +40,31 @@ h1 {
     text-align: center;
     font-weight: 700;
     font-size: 48px;
-    font-family: "Google Sans", sans-serif;
+    font-family: 'Palanquin Dark', sans-serif;
 }
 
 .headline {
     color: #E76C1F;
-    font-family: "Google Sans", sans-serif;
+    font-family: 'Palanquin Dark', sans-serif;
     font-weight: 700;
 }
 
 .headline-description {
     text-align: center;
-    font-family: "Google Sans", sans-serif;
+    font-family: 'Palanquin', sans-serif;
     color: #363634;
     font-size: 24px;
+    font-weight: 700;
 }
 
 .product-list {
-    font-family: "Google Sans", sans-serif;
+    font-family: 'Palanquin', sans-serif;
     background-color: #E76C1F;
     display: flex;
     flex-direction: column;
 }
 
-.seperator-content{
+.seperator-content {
     display: flex;
     align-items: center;
     color: white;
