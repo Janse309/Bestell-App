@@ -62,27 +62,27 @@ let dishes = [
         "name": "Warm beef arugula salad",
         "price": "16.90",
         "indigredients": "Beef, Arugula, Field salad, Greek feta, Cherry tomatoes, Sun-dried Tomatoes, Balsamic-vinegar dressing",
-        "image": "./assets/img/quattro-formaggi-with-chicken.jpg"
+        "image": "./assets/img/warm-beef-arugula-salad.jpg"
     },
         {
         "category": "Salad",
         "name": "Mini green Salad",
         "price": "7.90",
         "indigredients": "Green salad, Cucumber, Carrots, Parsley, Radishes",
-        "image": "./assets/img/quattro-formaggi-with-chicken.jpg"
+        "image": "./assets/img/mini-green-Salad.jpg"
     },
         {
         "category": "Salad",
         "name": "Green Salad with sea food",
         "price": "16.90",
         "indigredients": "Mixed greens, Cherry tomatoes, Red onion, Mussels, Squid rings, Shrimp, Dijon mustard-lemon dressing with dill",
-        "image": "./assets/img/quattro-formaggi-with-chicken.jpg"
+        "image": "./assets/img/green-Salad-with-sea-food.jpg"
     },
         {
         "category": "Salad",
         "name": "Vegan green salad with tofu",
         "price": "14.90",
         "indigredients": "Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",
-        "image": "./assets/img/quattro-formaggi-with-chicken.jpg"
+        "image": "./assets/img/vegan-green-salad-with-tofu.jpg"
         }
 ]
