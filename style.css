@@ -73,3 +73,21 @@ h1 {
     max-width: 1440px;
     margin: 0 auto;
 }
+
+.page-footer {
+    background-color: #E76C1F;
+
+}
+
+.page-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 128px;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 16px;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: white;
+    font-weight: 400;
+}
