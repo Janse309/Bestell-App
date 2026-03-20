@@ -14,6 +14,7 @@
     height: 128px;
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 48px;
 }
 
 .hero-image-content {
@@ -61,33 +62,38 @@ h1 {
     font-family: 'Palanquin', sans-serif;
     background-color: #E76C1F;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 .seperator-content {
     display: flex;
     align-items: center;
+    justify-content: baseline;
     color: white;
     font-size: 24px;
     font-weight: 700;
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 48px;
 }
 
 .page-footer {
     background-color: #E76C1F;
-
 }
 
 .page-footer-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 128px;
     font-family: 'Palanquin', sans-serif;
-    font-size: 16px;
-    max-width: 1440px;
-    margin: 0 auto;
+    font-size: 18px;
     color: white;
     font-weight: 400;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.page-footer-content a {
+    color: white;
 }
