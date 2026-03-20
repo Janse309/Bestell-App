@@ -60,29 +60,29 @@ let dishes = [
     {
         "category": "Salad",
         "name": "Warm beef arugula salad",
-        "price": "15.90",
-        "indigredients": "Chicken, Mozzarella, Gorgonzola, Fontina,  Parmigiano Reggiano",
+        "price": "16.90",
+        "indigredients": "Beef, Arugula, Field salad, Greek feta, Cherry tomatoes, Sun-dried Tomatoes, Balsamic-vinegar dressing",
         "image": "./assets/img/quattro-formaggi-with-chicken.jpg"
     },
         {
         "category": "Salad",
-        "name": "Quattro Formaggi with Chicken",
-        "price": "15.90",
-        "indigredients": "Chicken, Mozzarella, Gorgonzola, Fontina,  Parmigiano Reggiano",
+        "name": "Mini green Salad",
+        "price": "7.90",
+        "indigredients": "Green salad, Cucumber, Carrots, Parsley, Radishes",
         "image": "./assets/img/quattro-formaggi-with-chicken.jpg"
     },
         {
         "category": "Salad",
-        "name": "Quattro Formaggi with Chicken",
-        "price": "15.90",
-        "indigredients": "Chicken, Mozzarella, Gorgonzola, Fontina,  Parmigiano Reggiano",
+        "name": "Green Salad with sea food",
+        "price": "16.90",
+        "indigredients": "Mixed greens, Cherry tomatoes, Red onion, Mussels, Squid rings, Shrimp, Dijon mustard-lemon dressing with dill",
         "image": "./assets/img/quattro-formaggi-with-chicken.jpg"
     },
         {
         "category": "Salad",
-        "name": "Quattro Formaggi with Chicken",
-        "price": "15.90",
-        "indigredients": "Chicken, Mozzarella, Gorgonzola, Fontina,  Parmigiano Reggiano",
+        "name": "Vegan green salad with tofu",
+        "price": "14.90",
+        "indigredients": "Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",
         "image": "./assets/img/quattro-formaggi-with-chicken.jpg"
         }
 ]
