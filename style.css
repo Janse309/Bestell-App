@@ -60,3 +60,20 @@ h1 {
     color: #363634;
     font-size: 24px;
 }
+
+.product-list {
+    font-family: "Google Sans", sans-serif;
+    background-color: #E76C1F;
+}
+
+.seperator-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: antiquewhite;
+    font-size: 24px;
+    font-weight: 700;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: left;
+}
