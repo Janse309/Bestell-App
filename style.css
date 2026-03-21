@@ -42,6 +42,7 @@ h1 {
     font-weight: 700;
     font-size: 48px;
     font-family: 'Palanquin Dark', sans-serif;
+    color: #363634;
 }
 
 .headline {
@@ -60,9 +61,13 @@ h1 {
 
 .product-list {
     font-family: 'Palanquin', sans-serif;
-    background-color: #E76C1F;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    color: #363634;
+}
+
+.color-container{
+    background-color: #E76C1F;
 }
 
 .seperator-content {
@@ -72,9 +77,9 @@ h1 {
     color: white;
     font-size: 24px;
     font-weight: 700;
+    padding: 0 48px;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 48px;
 }
 
 .page-footer {
