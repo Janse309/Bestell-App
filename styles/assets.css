@@ -1,7 +1,19 @@
 /* Für Buttons */
 
-button {
+button{
+    padding-block: 0;
+    padding-inline: 0;
+    border-width: 0;
+}
+
+.hamburger-menu-btn {
     background: none;
     border: none;
     outline: none;
+}
+
+.basket-btn{
+    padding: 5px 8px;
+    border-radius: 20px;
+    background-color: white;
 }

@@ -24,7 +24,7 @@
                 <img src="./assets/img/main-logo.svg" alt="Logo">
             </div>
             <div>
-                <button onclick="openDialog()"><img src="./assets/img/hamburger-menu.svg" alt="Menü"></button>
+                <button class="hamburger-menu-btn" onclick="openDialog()"><img src="./assets/img/hamburger-menu.svg" alt="Menü"></button>
             </div>
         </section>
     </header>
@@ -48,21 +48,25 @@
                         <h2>Burger&Sandwiches</h2>
                     </div>
                 </div>
-                <div id="burger-list"></div>
+                <div class="food-list burger-list" id="burger-list"></div>
             </section>
 
             <section id="pizza-section">
-                <div class="seperator-content">
-                    <img src="./assets/img/pizza_seperator.svg" alt="Burger">
-                    <h2>Pizza</h2>
+                <div class="color-container">
+                    <div class="seperator-content">
+                        <img src="./assets/img/pizza_seperator.svg" alt="Burger">
+                        <h2>Pizza</h2>
+                    </div>
                 </div>
                 <div id="pizza-list"></div>
             </section>
 
             <section id="salat-section">
-                <div class="seperator-content">
-                    <img src="./assets/img/salat_seperator.svg" alt="Burger">
-                    <h2>Salat</h2>
+                <div class="color-container">
+                    <div class="seperator-content">
+                        <img src="./assets/img/salat_seperator.svg" alt="Burger">
+                        <h2>Salat</h2>
+                    </div>
                 </div>
                 <div id="salat-list"></div>
             </section>
@@ -82,3 +86,19 @@
 </body>
 
 </html>
+
+    <div class="dish-card">
+        <div class="test">
+        <div class="dish-image-container">
+            <img src="${dish.image}" alt="${dishes.name}">
+        </div>
+        <div class="dish-information-container">
+            <h3 class="dish-headline">${dish.name}</h3>
+            <p class="dish-description">${dish.indigredients}</p>
+        </div>
+        <div class="dish-price">
+            <p>${dish.price}</p>
+            <button class="basket-btn"><img src="${dish.button}" alt="Hinzufügen"></button> 
+        </div>
+        </div>
+    </div>

@@ -66,7 +66,7 @@ h1 {
     color: #363634;
 }
 
-.color-container{
+.color-container {
     background-color: #E76C1F;
 }
 
@@ -81,6 +81,55 @@ h1 {
     max-width: 1440px;
     margin: 0 auto;
 }
+
+#burger-list {
+    margin: 32px 0;
+}
+
+#pizza-list {
+    margin: 32px 0;
+}
+
+#salat-list {
+    margin: 32px 0;
+}
+
+.dish-card{
+    display: flex;
+    align-items: center;
+    padding: 0 48px;
+    height: 132px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.dish-card:nth-child(n) {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.meal-container {
+    display: flex;
+    width: 713px;
+    background-color: #FDEADC;
+}
+
+.dish-information-container {
+    display: flex;
+    flex-direction: column;
+    width: 469px;
+}
+
+.dish-information-container h3 {
+    text-align: left;
+}
+
+.dish-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 
 .page-footer {
     background-color: #E76C1F;
