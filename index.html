@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/standart.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/basket.css">
     <script src="./scripts/db.js" defer></script>
     <script src="./scripts/template.js" defer></script>
     <script src="script.js" defer></script>
@@ -24,7 +25,7 @@
                 <img src="./assets/img/main-logo.svg" alt="Logo">
             </div>
             <div>
-                <button class="hamburger-menu-btn" onclick="openDialog()"><img src="./assets/img/hamburger-menu.svg" alt="Menü"></button>
+                <button class="hamburger-menu-btn"><img src="./assets/img/hamburger-menu.svg" alt="Menü"></button>
             </div>
         </section>
     </header>
@@ -72,6 +73,9 @@
             </section>
 
         </section>
+
+        <aside id="basket" class="d_none basket-container"></aside>
+
     </main>
 
     <footer class="page-footer">
@@ -82,23 +86,10 @@
         </section>
     </footer>
 
-    <dialog id="testDialog">huhh</dialog>
+    
+
+
 </body>
 
 </html>
 
-    <div class="dish-card">
-        <div class="test">
-        <div class="dish-image-container">
-            <img src="${dish.image}" alt="${dishes.name}">
-        </div>
-        <div class="dish-information-container">
-            <h3 class="dish-headline">${dish.name}</h3>
-            <p class="dish-description">${dish.indigredients}</p>
-        </div>
-        <div class="dish-price">
-            <p>${dish.price}</p>
-            <button class="basket-btn"><img src="${dish.button}" alt="Hinzufügen"></button> 
-        </div>
-        </div>
-    </div>

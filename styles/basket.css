@@ -1,0 +1,13 @@
+.d_none {
+    display: none;
+}
+
+.basket-container {
+    width: 400px;
+    height: 400px;
+    background-color: #E76C1F;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+}

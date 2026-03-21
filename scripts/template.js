@@ -12,7 +12,7 @@ function getDishTemplate(index) {
             </div>
             <div class="dish-price">
                 <p>${dish.price}</p>
-                <button class="basket-btn"><img src="${dish.button}" alt="Hinzufügen"></button> 
+                <button onclick="openBasket()" class="basket-btn"><img src="${dish.button}" alt="Hinzufügen"></button> 
             </div>
         </div>
     </div>

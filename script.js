@@ -1,6 +1,10 @@
+let basket = [];
+
 function init() {
     renderDishes();
 }
+
+
 
 // function renderDishes() {
 //     let contentRef = document.getElementById(index, containerId);
@@ -32,7 +36,6 @@ function renderDishes() {
 }
 
 
-function openDialog() {
-    let dialog = document.getElementById('testDialog');
-    dialog.showModal(); // Benutze showModal() für einen echten Overlay-Dialog
+function openBasket() {
+    document.getElementById('basket').classList.toggle('d_none');
 }
