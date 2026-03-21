@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="./styles/standart.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/fonts.css">
+    <script src="./scripts/db.js" defer></script>
+    <script src="./scripts/template.js" defer></script>
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
-<body>
+<body onload="init()">
     <header class="page-header">
         <section class="header-content">
             <div>
@@ -33,20 +35,18 @@
                 <img class="hero-image" src="./assets/img/hero.jpg" alt="hero-image">
                 <img class="burger-img" src="./assets/img/burger-logo.svg" alt="Burger Image">
             </div>
+            <h1><span class="headline">Burger</span>House</h1>
+            <h3 class="headline-description">The best of Burgers, Pizza, and Greens, all in one great place.</h3>
         </section>
 
-        <h1><span class="headline">Burger</span>House</h1>
-        <h3 class="headline-description">The best of Burgers, Pizza, and Greens, all in one great place.</h3>
-
-        </section>
-
-        <section class="product-list">
+        <section id="product_list" class="product-list">
 
             <section id="burger-section">
                 <div class="seperator-content">
                     <img src="./assets/img/burger_seperator.svg" alt="Burger">
                     <h2>Burger&Sandwiches</h2>
                 </div>
+                <div id="burger-list"></div>
             </section>
 
             <section id="pizza-section">
@@ -54,6 +54,7 @@
                     <img src="./assets/img/pizza_seperator.svg" alt="Burger">
                     <h2>Pizza</h2>
                 </div>
+                <div id="pizza-list"></div>
             </section>
 
             <section id="salat-section">
@@ -61,6 +62,7 @@
                     <img src="./assets/img/salat_seperator.svg" alt="Burger">
                     <h2>Salat</h2>
                 </div>
+                <div id="salat-list"></div>
             </section>
 
         </section>
