@@ -4,6 +4,7 @@ button{
     padding-block: 0;
     padding-inline: 0;
     border-width: 0;
+    outline: none;
 }
 
 .hamburger-menu-btn {
@@ -16,4 +17,9 @@ button{
     padding: 5px 8px;
     border-radius: 20px;
     background-color: white;
+}
+
+.control-btn{
+    color: white;
+    
 }

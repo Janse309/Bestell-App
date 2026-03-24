@@ -63,3 +63,13 @@ function addToBasket(index) {
     renderBasket();
 }
 
+function changeAmount(index, change) {
+    basket[index].amount += change;
+
+    if (basket[index].amount <= 0) {
+        basket.splice(index, 1);
+    }
+
+    renderBasket();
+}
+

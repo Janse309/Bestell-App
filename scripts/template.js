@@ -24,13 +24,15 @@ function getBasketTemplate(item, index) {
     return `
         <div class="basket-item">
             <div class="basket-item-details">
-                <b>${item.name}</b>
-                <span>${totalItemPrice.toFixed(2).replace('.', ',')} €</span>
+                <b>${item.name}</b>  
             </div>
             <div class="basket-controls">
-                <button onclick="changeAmount(${index}, -1)"><img src=./assets/icons/minus.svg></button>
+                <div class="test">
+                <button onclick="changeAmount(${index}, -1)"><img class="control-btn" src=./assets/icons/minus.svg></button>
                 <span>${item.amount}</span>
-                <button onclick="changeAmount(${index}, 1)"><img src=./assets/icons/plus.svg></button>
+                <button onclick="changeAmount(${index}, 1)"><img class="control-btn" src=./assets/icons/plus.svg></button>
+                </div>
+                <div>${totalItemPrice.toFixed(2).replace('.', ',')} €</div>
             </div>
         </div>
     `;
