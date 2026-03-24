@@ -21,5 +21,14 @@ button{
 
 .control-btn{
     color: white;
-    
+}
+
+.buy-now-btn{
+    color: white;
+    background-color: #E76C1F;
+    font-family: 'Palanquin', sans-serif;
+    border-radius: 24px;
+    font-weight: 700;
+    font-size: 24px;
+    width: 100%;
 }

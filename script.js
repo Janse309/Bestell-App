@@ -44,7 +44,6 @@ function renderBasket() {
         basketRef.innerHTML += getBasketTemplate(item, index)
     }
      //renderTotals();
-
 }
 
 function addToBasket(index) {

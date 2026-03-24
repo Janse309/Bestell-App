@@ -35,5 +35,7 @@ function getBasketTemplate(item, index) {
                 <div>${totalItemPrice.toFixed(2).replace('.', ',')} €</div>
             </div>
         </div>
+
+        <button class="buy-now-btn">Buy now</button>
     `;
 }
