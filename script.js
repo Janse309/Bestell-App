@@ -35,10 +35,8 @@ function renderDishes() {
 }
 
 function renderBasket() {
-    let basketRef = document.getElementById('basket')
-    const headline = document.getElementById('basket');
+    let basketRef = document.getElementById('basket-list')
     basketRef.innerHTML = "";
-    headline.innerHTML = "<h2>Warenkorb</h2>"
     for (let index = 0; index < basket.length; index++) {
         let item = basket[index];
         basketRef.innerHTML += getBasketTemplate(item, index)
