@@ -11,10 +11,27 @@ function getDishTemplate(index) {
                 <p class="dish-description">${dish.indigredients}</p>
             </div>
             <div class="dish-price">
-                <p>${dish.price}</p>
-                <button onclick="openBasket()" class="basket-btn"><img src="${dish.button}" alt="Hinzufügen"></button> 
+                <p>${Number(dish.price).toFixed(2).replace('.', ',')}€</p>
+                <button onclick="addToBasket(${index})" class="add-btn"><img src="${dish.button}" alt="Hinzufügen"></button> 
             </div>
         </div>
     </div>
 `
+}
+
+function getBasketTemplate(item, index) {
+    let totalItemPrice = item.price * item.amount;
+    return `
+        <div class="basket-item">
+            <div class="basket-item-details">
+                <b>${item.name}</b>
+                <span>${totalItemPrice.toFixed(2).replace('.', ',')} €</span>
+            </div>
+            <div class="basket-controls">
+                <button onclick="changeAmount(${index}, -1)"><img src=./assets/icons/minus.svg></button>
+                <span>${item.amount}</span>
+                <button onclick="changeAmount(${index}, 1)"><img src=./assets/icons/plus.svg></button>
+            </div>
+        </div>
+    `;
 }

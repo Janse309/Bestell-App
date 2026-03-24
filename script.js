@@ -2,9 +2,8 @@ let basket = [];
 
 function init() {
     renderDishes();
+    renderBasket();
 }
-
-
 
 // function renderDishes() {
 //     let contentRef = document.getElementById(index, containerId);
@@ -35,7 +34,32 @@ function renderDishes() {
     }
 }
 
+function renderBasket() {
+    let basketRef = document.getElementById('basket')
+    const headline = document.getElementById('basket');
+    basketRef.innerHTML = "";
+    headline.innerHTML = "<h2>Warenkorb</h2>"
+    for (let index = 0; index < basket.length; index++) {
+        let item = basket[index];
+        basketRef.innerHTML += getBasketTemplate(item, index)
+    }
+     //renderTotals();
 
-function openBasket() {
-    document.getElementById('basket').classList.toggle('d_none');
 }
+
+function addToBasket(index) {
+    let dish = dishes[index];
+    let foundItem = basket.find((item) => item.name === dish.name)
+
+    if (foundItem) {
+        foundItem.amount++;
+    } else {
+        basket.push({
+            "name": dish.name,
+            "price": Number(dish.price),
+            "amount": 1 
+        });
+    }
+    renderBasket();
+}
+

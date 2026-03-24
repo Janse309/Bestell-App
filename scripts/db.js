@@ -31,7 +31,6 @@ let dishes = [
         "image": "./assets/img/big-chicken-burger.jpg",
         "button" : "./assets/icons/add_to_basket.svg"
     },
-    // Pizza
     {
         "category": "Pizza",
         "name": "Pizza Margherita",
@@ -97,4 +96,4 @@ let dishes = [
         "image": "./assets/img/vegan-green-salad-with-tofu.jpg",
         "button" : "./assets/icons/add_to_basket.svg"
         }
-]
+];
