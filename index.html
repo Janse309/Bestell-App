@@ -50,7 +50,7 @@
                             <h2>Burger&Sandwiches</h2>
                         </div>
                     </div>
-                    <div class="food-list burger-list" id="burger-list"></div>
+                    <div class="burger-list" id="burger-list"></div>
                 </section>
 
                 <section id="pizza-section">
@@ -77,13 +77,24 @@
 
             <aside class="basket-wrapper">
                 <section class="basket">
-                    <h2>Warenkorb</h2>
+                    <div class="basket-heading">
+                        <h2>Warenkorb</h2>
+                    </div>
                     <div id="basket-list"></div>
                     <div class="totals">
-                        <p>Zwischensumme:<span id="subtotal">0,00 €</span></p>
-                        <p>Lieferkosten: 3,00 €</p>
-                        <hr>
-                        <p><strong>Gesamt: <span id="total">0,00 €</span></strong></p>
+                        <div class="basket-text">
+                            <p>Zwischensumme:</p>
+                            <p class="calculated-price" id="subtotal">0,00 €</p>
+                        </div>
+                        <div class="basket-text border">
+                            <p>Lieferkosten:</p>
+                            <p class="calculated-price">3,00 €</p>
+                        </div>
+
+                        <div class="basket-text">
+                            <p>Gesamt:</p>
+                            <p class="calculated-price" id="total">0,00 €</p>
+                        </div>
                     </div>
                     <button class="order-btn">Buy now</button>
                 </section>

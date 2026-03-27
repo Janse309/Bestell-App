@@ -19,16 +19,3 @@ button{
     background-color: #FDEADC;
 }
 
-.control-btn{
-    color: #FDEADC;
-}
-
-.order-btn{
-    color: white;
-    background-color: #E76C1F;
-    font-family: 'Palanquin', sans-serif;
-    border-radius: 16px;
-    font-weight: 700;
-    font-size: 24px;
-    width: 100%;
-}

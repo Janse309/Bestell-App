@@ -1,3 +1,7 @@
+.d_none {
+    display: none;
+}
+
 .page-header {
     background-color: #E76C1F;
 }
@@ -36,24 +40,22 @@
 
 h1 {
     text-align: center;
-    font-weight: 700;
     font-size: 48px;
     font-family: 'Palanquin Dark', sans-serif;
     color: #363634;
+    font-weight: bold;
 }
 
 .headline {
     color: #E76C1F;
-    font-family: 'Palanquin Dark', sans-serif;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .headline-description {
     text-align: center;
-    font-family: 'Palanquin', sans-serif;
+    font-family: 'Palanquin_700', sans-serif;
     color: #363634;
     font-size: 24px;
-    font-weight: 700;
 }
 
 .splitt_view_container {
@@ -64,11 +66,12 @@ h1 {
 }
 
 .product-list {
-    font-family: 'Palanquin', sans-serif;
+    font-family: 'Palanquin_400', sans-serif;
     display: flex;
     flex-direction: column;
     color: #363634;
     flex: 1;
+    font-size: 24px;
 }
 
 .color-container {
@@ -78,13 +81,20 @@ h1 {
 .seperator-content {
     display: flex;
     align-items: center;
-    justify-content: baseline;
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
     padding: 0 48px;
     max-width: 1440px;
     margin: 0 auto;
+    height: 60px;
+}
+
+.seperator-content h2 {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.seperator-content img{
+    height: 91px;
 }
 
 #burger-list {
@@ -97,6 +107,10 @@ h1 {
 
 #salat-list {
     margin: 32px 0;
+}
+
+.dish-headline {
+    font-size: 24px;
 }
 
 .dish-card {
@@ -129,12 +143,17 @@ h1 {
     text-align: left;
 }
 
+.dish-description {
+    font-family: 'Palanquin_400', sans-serif;
+    font-size: 16px;
+}
+
 .dish-price {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-weight: 700;
 }
-
 
 .page-footer {
     background-color: #E76C1F;
@@ -145,14 +164,13 @@ h1 {
     align-items: center;
     justify-content: space-around;
     height: 128px;
-    font-family: 'Palanquin', sans-serif;
+    font-family: 'Palanquin_400', sans-serif;
     font-size: 18px;
     color: white;
-    font-weight: 400;
     max-width: 1440px;
     margin: 0 auto;
 }
 
 .page-footer-content a {
-    color: white;
+    color: #FDEADC;
 }
