@@ -16,18 +16,18 @@ button{
 .add-btn{
     padding: 5px 8px;
     border-radius: 20px;
-    background-color: white;
+    background-color: #FDEADC;
 }
 
 .control-btn{
-    color: white;
+    color: #FDEADC;
 }
 
 .order-btn{
     color: white;
     background-color: #E76C1F;
     font-family: 'Palanquin', sans-serif;
-    border-radius: 24px;
+    border-radius: 16px;
     font-weight: 700;
     font-size: 24px;
     width: 100%;

@@ -30,62 +30,67 @@
         </section>
     </header>
 
-    <main class="wrapper">
+    <main>
         <section class="hero-section">
             <div class="hero-image-content">
-                <img class="hero-image" src="./assets/img/hero.jpg" alt="hero-image">
+                <img class="hero-img" src="./assets/img/hero.jpg" alt="hero-image">
                 <img class="burger-img" src="./assets/img/burger-logo.svg" alt="Burger Image">
             </div>
             <h1><span class="headline">Burger</span>House</h1>
             <h3 class="headline-description">The best of Burgers, Pizza, and Greens, all in one great place.</h3>
         </section>
 
-        <section id="product_list" class="product-list">
+        <div class="splitt_view_container">
+            <section id="product_list" class="product-list">
 
-            <section id="burger-section">
-                <div class="color-container">
-                    <div class="seperator-content">
-                        <img src="./assets/img/burger_seperator.svg" alt="Burger">
-                        <h2>Burger&Sandwiches</h2>
+                <section id="burger-section">
+                    <div class="color-container">
+                        <div class="seperator-content">
+                            <img src="./assets/img/burger_seperator.svg" alt="Burger">
+                            <h2>Burger&Sandwiches</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="food-list burger-list" id="burger-list"></div>
+                    <div class="food-list burger-list" id="burger-list"></div>
+                </section>
+
+                <section id="pizza-section">
+                    <div class="color-container">
+                        <div class="seperator-content">
+                            <img src="./assets/img/pizza_seperator.svg" alt="Burger">
+                            <h2>Pizza</h2>
+                        </div>
+                    </div>
+                    <div id="pizza-list"></div>
+                </section>
+
+                <section id="salat-section">
+                    <div class="color-container">
+                        <div class="seperator-content">
+                            <img src="./assets/img/salat_seperator.svg" alt="Burger">
+                            <h2>Salat</h2>
+                        </div>
+                    </div>
+                    <div id="salat-list"></div>
+                </section>
+
             </section>
 
-            <section id="pizza-section">
-                <div class="color-container">
-                    <div class="seperator-content">
-                        <img src="./assets/img/pizza_seperator.svg" alt="Burger">
-                        <h2>Pizza</h2>
+            <aside class="basket-wrapper">
+                <section class="basket">
+                    <h2>Warenkorb</h2>
+                    <div id="basket-list"></div>
+                    <div class="totals">
+                        <p>Zwischensumme:<span id="subtotal">0,00 €</span></p>
+                        <p>Lieferkosten: 3,00 €</p>
+                        <hr>
+                        <p><strong>Gesamt: <span id="total">0,00 €</span></strong></p>
                     </div>
-                </div>
-                <div id="pizza-list"></div>
-            </section>
+                    <button class="order-btn">Buy now</button>
+                </section>
+            </aside>
 
-            <section id="salat-section">
-                <div class="color-container">
-                    <div class="seperator-content">
-                        <img src="./assets/img/salat_seperator.svg" alt="Burger">
-                        <h2>Salat</h2>
-                    </div>
-                </div>
-                <div id="salat-list"></div>
-            </section>
 
-        </section>
-
-        <aside id="basket" class="basket-wrapper">
-            <h2>Warenkorb</h2>
-            <div id="basket-list"></div>
-            <hr>
-            <div class="totals">
-                <p>Zwischensumme: <span id="subtotal">0,00 €</span></p>
-                <p>Lieferkosten: 5,00 €</p>
-                <p><strong>Gesamt: <span id="total">0,00 €</span></strong></p>
-            </div>
-            <button class="order-btn">Buy now</button>
-        </aside>
-
+        </div>
     </main>
 
     <footer class="page-footer">

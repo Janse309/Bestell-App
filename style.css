@@ -12,6 +12,10 @@
     padding: 0 48px;
 }
 
+.hero-section {
+    width: 100%;
+}
+
 .hero-image-content {
     display: flex;
     flex-direction: column;
@@ -19,6 +23,11 @@
     height: auto;
     max-width: 1440px;
     margin: 0 auto;
+}
+
+.hero-img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .burger-img {
@@ -47,16 +56,19 @@ h1 {
     font-weight: 700;
 }
 
-/* .wrapper{
-    max-width: 1440px;
-    margin: 0 auto;
-} */
+.splitt_view_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
 
 .product-list {
     font-family: 'Palanquin', sans-serif;
     display: flex;
     flex-direction: column;
     color: #363634;
+    flex: 1;
 }
 
 .color-container {
@@ -87,7 +99,7 @@ h1 {
     margin: 32px 0;
 }
 
-.dish-card{
+.dish-card {
     display: flex;
     align-items: center;
     padding: 0 48px;

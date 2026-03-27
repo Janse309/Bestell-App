@@ -16,7 +16,7 @@ function getDishTemplate(index) {
             </div>
         </div>
     </div>
-`
+    `;
 }
 
 function getBasketTemplate(item, index) {
