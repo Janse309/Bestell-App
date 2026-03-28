@@ -57,9 +57,9 @@
 }
 
 .trash-icon {
-    width: 20px;
     vertical-align: middle;
     padding: 0;
+    height: 16px;
 }
 
 .basket-counter {

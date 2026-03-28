@@ -58,7 +58,6 @@ function renderTotals() {
 function addToBasket(index) {
     let dish = dishes[index];
     let foundItem = basket.find((item) => item.name === dish.name)
-
     if (foundItem) {
         foundItem.amount++;
     } else {
@@ -67,8 +66,13 @@ function addToBasket(index) {
             "price": Number(dish.price),
             "amount": 1
         });
+        
     }
     renderBasket();
+}
+
+function priceButton() {
+    document.getElementById('orderPrice').innerHTML = "hallo";
 }
 
 function changeAmount(index, change) {
@@ -87,4 +91,7 @@ function openBasket() {
 function closeBasket() {
     document.getElementById('basket-modal').classList.add('d_none');
 }
+
+// basket mit button(preis) ergänzen
+// closeBasket optimieren
 
