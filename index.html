@@ -77,12 +77,12 @@
 
             </section>
 
-            <aside class="basket-wrapper d_none">
+            <aside id="basket-modal" class="basket-wrapper d_none">
                 <section class="basket">
-                    <div class="basket-headline">
-                        <h2>Warenkorb</h2>
+                    <div>
+                        <h2 class="basket-headline">Warenkorb</h2>
+                        <div id="basket-list"></div>
                     </div>
-                    <div id="basket-list"></div>
                     <div class="totals">
                         <div class="basket-text">
                             <p>Zwischensumme:</p>
@@ -92,13 +92,14 @@
                             <p>Lieferkosten:</p>
                             <p class="calculated-price">3,00 €</p>
                         </div>
-
-                        <div class="basket-text">
-                            <p>Gesamt:</p>
-                            <p class="calculated-price" id="total">0,00 €</p>
+                        <div >
+                            <div class="basket-text">
+                                <p>Gesamt:</p>
+                                <p class="calculated-price" id="total">0,00 €</p>
+                            </div>
+                            <button class="order-btn">Buy now</button>
                         </div>
                     </div>
-                    <button class="order-btn">Buy now</button>
                 </section>
             </aside>
 

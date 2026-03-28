@@ -12,7 +12,7 @@ function getDishTemplate(index) {
             </div>
             <div class="dish-price">
                 <p>${Number(dish.price).toFixed(2).replace('.', ',')}€</p>
-                <button onclick="addToBasket(${index})" class="add-btn">Add to basket</button> 
+                <button onclick="addToBasket(${index}); openBasket()" class="add-btn">Add to basket</button> 
             </div>
         </div>
     </div>
@@ -21,21 +21,23 @@ function getDishTemplate(index) {
 
 function getBasketTemplate(item, index) {
     let totalItemPrice = item.price * item.amount;
+    let trashIcon = item.amount === 1 
+        ? `<img onclick="closeBasket()" src="./assets/icons/delete.svg" alt="Löschen" class="trash-icon">` : `-`;
     return `
         <div class="basket-item">
             <div class="basket-item-details">
-                <h3>${item.name}</h3>  
+                <h3>${item.name}</h3> 
             </div>
             <div class="basket-controls">
                 <div class="basket-counter">
-                <button class="control-btn" onclick="changeAmount(${index}, -1)">-</button>
+                <button class="control-btn" onclick="changeAmount(${index}, -1)">${trashIcon}</button>
                 <span>${item.amount}</span>
                 <button class="control-btn" onclick="changeAmount(${index}, 1)">+</button>
                 </div>
                 <div>${totalItemPrice.toFixed(2).replace('.', ',')} €</div>
-            </div>
-            
+            </div>  
         </div>
-
     `;
 }
+
+

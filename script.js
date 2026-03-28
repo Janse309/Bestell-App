@@ -75,9 +75,16 @@ function changeAmount(index, change) {
     basket[index].amount += change;
 
     if (basket[index].amount <= 0) {
-        basket.splice(index, 1);
+        basket.splice(index, 1);   
     }
-
     renderBasket();
+}
+
+function openBasket() {
+    document.getElementById('basket-modal').classList.remove('d_none');
+}
+
+function closeBasket() {
+    document.getElementById('basket-modal').classList.add('d_none');
 }
 
