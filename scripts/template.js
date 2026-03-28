@@ -12,7 +12,7 @@ function getDishTemplate(index) {
             </div>
             <div class="dish-price">
                 <p>${Number(dish.price).toFixed(2).replace('.', ',')}€</p>
-                <button onclick="addToBasket(${index})" class="add-btn"><img src="${dish.button}" alt="Hinzufügen"></button> 
+                <button onclick="addToBasket(${index})" class="add-btn">Add to basket</button> 
             </div>
         </div>
     </div>

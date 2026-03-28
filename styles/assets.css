@@ -1,6 +1,6 @@
 /* Für Buttons */
 
-button{
+button {
     padding-block: 0;
     padding-inline: 0;
     border-width: 0;
@@ -13,9 +13,11 @@ button{
     outline: none;
 }
 
-.add-btn{
+.add-btn {
     padding: 5px 8px;
     border-radius: 20px;
-    background-color: #FDEADC;
+    background-color: white;
+    font-size: 16px;
+    font-family: 'Palanquin_400', sans-serif;
+    font-weight: bold;
 }
-
