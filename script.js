@@ -18,7 +18,7 @@ function renderDishes() {
     for (let index = 0; index < dishes.length; index++) {
         let dish = dishes[index];
         let template = getDishTemplate(index);
-        
+
         if (dish.category === "Burger & Sandwiches") {
             document.getElementById('burger-list').innerHTML += template;
         } else if (dish.category === "Pizza") {
@@ -65,9 +65,14 @@ function addToBasket(index) {
     renderBasket();
 }
 
-function priceButton() {
-    document.getElementById('orderPrice').innerHTML = "hallo";
+function deleteItem(index) {
+    basket.splice(index, 1);
+    renderBasket();
 }
+
+// function priceButton() {
+//     document.getElementById('orderPrice').innerHTML = "hallo";
+// }
 
 function changeAmount(index, change) {
     basket[index].amount += change;
@@ -83,10 +88,15 @@ function openBasket() {
 }
 
 function closeBasket() {
-    document.getElementById('basket-modal').classList.add('d_none');
+    if (basket === "") {
+        document.getElementById('basket-modal').classList.add('d_none');
+    }
 }
 
-// basket mit button(preis) ergänzen
-// closeBasket optimieren
-// responsive
 
+// closeBasket optimieren
+// basket mit button(preis) ergänzen
+// responsive
+// Bewertung einfügen
+// Warenkorb leeren indem man auf bestellen drückt (ein Dialog taucht auf)
+// local Storage einfügen

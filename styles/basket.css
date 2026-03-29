@@ -36,30 +36,37 @@
     gap: 8px;
 }
 
-.basket-item h3{
-    font-size: 24px;
+.basket-item-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.basket-item-details {
-    font-size: 18px;
+.basket-controls h3{
+    font-size: 24px;
 }
 
 .basket-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    vertical-align: middle;
 }
 
 .control-btn {
     color: #363534;
     background: none;
     font-size: 20px;
+    font-family: 'Palanquin', sans-serif;
+    vertical-align: middle;
+
 }
 
 .trash-icon {
     vertical-align: middle;
     padding: 0;
-    height: 16px;
+    width: 20px;
+    background: none;
 }
 
 .basket-counter {
