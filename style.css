@@ -108,12 +108,18 @@ h1 {
     align-items: center;
     gap: 16px;
     padding: 0 20px;
+    color: white;
+
 }
 
 .seperator-content h2 {
-    font-size: 40px;
-    color: white;
     font-weight: bold;
+    font-size: 40px;
+
+}
+
+.seperator-content p{
+    font-size: 40px;
 }
 
 .seperator-content img {

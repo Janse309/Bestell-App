@@ -15,21 +15,16 @@ function init() {
 // }
 
 function renderDishes() {
-    let burgerContainer = document.getElementById('burger-list');
-    let pizzaContainer = document.getElementById('pizza-list');
-    let saladContainer = document.getElementById('salat-list');
-    burgerContainer.innerHTML = "";
-    pizzaContainer.innerHTML = "";
-    saladContainer.innerHTML = "";
     for (let index = 0; index < dishes.length; index++) {
         let dish = dishes[index];
         let template = getDishTemplate(index);
+        
         if (dish.category === "Burger & Sandwiches") {
-            burgerContainer.innerHTML += template;
+            document.getElementById('burger-list').innerHTML += template;
         } else if (dish.category === "Pizza") {
-            pizzaContainer.innerHTML += template;
+            document.getElementById('pizza-list').innerHTML += template;
         } else if (dish.category === "Salad") {
-            saladContainer.innerHTML += template;
+            document.getElementById('salat-list').innerHTML += template;
         }
     }
 }
@@ -66,7 +61,6 @@ function addToBasket(index) {
             "price": Number(dish.price),
             "amount": 1
         });
-        
     }
     renderBasket();
 }
@@ -79,7 +73,7 @@ function changeAmount(index, change) {
     basket[index].amount += change;
 
     if (basket[index].amount <= 0) {
-        basket.splice(index, 1);   
+        basket.splice(index, 1);
     }
     renderBasket();
 }
@@ -94,4 +88,5 @@ function closeBasket() {
 
 // basket mit button(preis) ergänzen
 // closeBasket optimieren
+// responsive
 
