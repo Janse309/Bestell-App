@@ -68,6 +68,7 @@ function addToBasket(index) {
 function deleteItem(index) {
     basket.splice(index, 1);
     renderBasket();
+    closeBasket();
 }
 
 // function priceButton() {
@@ -88,7 +89,8 @@ function openBasket() {
 }
 
 function closeBasket() {
-    if (basket === "") {
+    // Wenn die Länge des Warenkorbs 0 ist, ist er leer
+    if (basket.length === 0) {
         document.getElementById('basket-modal').classList.add('d_none');
     }
 }
