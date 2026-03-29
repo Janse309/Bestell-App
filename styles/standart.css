@@ -7,14 +7,16 @@
 }
 
 a {
-    text-decoration: none;  
+    text-decoration: none;
 }
 
 button {
     cursor: pointer;
+    background: none;
+    margin: 0;
+    padding: 0;
 }
 
 span {
     text-transform: none;
 }
-

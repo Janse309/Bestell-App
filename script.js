@@ -99,13 +99,18 @@ function placeOrder() {
     basket = [];
     renderBasket();
     closeBasket();
+    openDialog();
+}
+
+function openDialog() {
+    const dialog = document.getElementById('dialog')
+    dialog.showModal();
 }
 
 
 // basket mit button(preis) ergänzen
 // responsive
-// Bewertung einfügen
-// Warenkorb leeren indem man auf bestellen drückt (ein Dialog taucht auf)
+// Dialog positionieren
 // local Storage einfügen
 
 // Problem mit dem Button und dem Minus und Plus beheben

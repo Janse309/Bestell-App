@@ -32,7 +32,7 @@ function getBasketTemplate(item, index) {
             <div class="basket-controls">
                 <div class="basket-counter">
                 <button class="control-btn" onclick="changeAmount(${index}, -1)">${trashIcon}</button>
-                <span>${item.amount}</span>
+                <span class="amount-display">${item.amount}</span>
                 <button class="control-btn" onclick="changeAmount(${index}, 1)">+</button>
                 </div>
                 <div>${totalItemPrice.toFixed(2).replace('.', ',')} €</div>

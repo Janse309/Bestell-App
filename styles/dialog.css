@@ -1,0 +1,33 @@
+dialog {
+    background-color: #363534;
+    color: #FDEADC;
+    font-family: 'Palanquin_700', sans-serif;
+    border-radius: 32px;
+    border: none;
+    animation: slideIn 0.3s ease-out 0s 1 normal none;
+    animation-duration: 5s;
+}
+
+dialog h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+dialog p{
+    font-size: 32px;
+}
+
+.dialog-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 440px;
+}
+
+.order-dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

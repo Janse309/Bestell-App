@@ -16,7 +16,7 @@
     font-weight: 400;
 }
 
-.basket-headline{
+.basket-headline {
     font-size: 32px;
     font-weight: 400;
     text-align: center;
@@ -38,11 +38,11 @@
 
 .basket-item-details {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 }
 
-.basket-controls h3{
+.basket-controls h3 {
     font-size: 24px;
 }
 
@@ -50,30 +50,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    vertical-align: middle;
-}
-
-.control-btn {
-    color: #363534;
-    background: none;
-    font-size: 20px;
-    font-family: 'Palanquin', sans-serif;
-    vertical-align: middle;
-
-}
-
-.trash-icon {
-    vertical-align: middle;
-    padding: 0;
-    width: 20px;
-    background: none;
 }
 
 .basket-counter {
     display: flex;
     align-items: center;
     gap: 8px;
-    vertical-align: middle;
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    font-size: 24px;
+    font-family: 'Palanquin', sans-serif;
+    padding: 0;
+}
+
+.trash-icon img{
+    height: 20px;
+    width: 20px;
+}
+
+.amount-display {
+    text-align: center;
+    line-height: 30px;
 }
 
 .totals {
@@ -103,4 +104,3 @@
     font-size: 32px;
     width: 100%;
 }
-

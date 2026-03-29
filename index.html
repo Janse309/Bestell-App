@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/dialog.css">
     <script src="./scripts/db.js" defer></script>
     <script src="./scripts/template.js" defer></script>
     <script src="script.js" defer></script>
@@ -107,7 +108,7 @@
                             <p>Lieferkosten:</p>
                             <p class="calculated-price">3,00 €</p>
                         </div>
-                        <div >
+                        <div>
                             <div class="basket-text">
                                 <p>Gesamt:</p>
                                 <p class="calculated-price" id="total">0,00 €</p>
@@ -118,8 +119,14 @@
                 </section>
             </aside>
 
-            <dialog>
-
+            <dialog id="dialog">
+                <section class="dialog-section">
+                    <div class="order-dialog">
+                        <img src="./assets/img/purcheOrder.svg" alt="DeliverCar">
+                        <h2>Bestellung bestätigt!</h2>
+                        <p>Ihr Essen ist unterwegs!</p>
+                    </div>
+                </section>
             </dialog>
 
         </div>
