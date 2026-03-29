@@ -95,10 +95,19 @@ function closeBasket() {
     }
 }
 
+function placeOrder() {
+    basket = [];
+    renderBasket();
+    closeBasket();
+}
 
-// closeBasket optimieren
+
 // basket mit button(preis) ergänzen
 // responsive
 // Bewertung einfügen
 // Warenkorb leeren indem man auf bestellen drückt (ein Dialog taucht auf)
 // local Storage einfügen
+
+// Problem mit dem Button und dem Minus und Plus beheben
+
+// Warenkorb mit true und false öffnen und scließen ?
