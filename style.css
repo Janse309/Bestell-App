@@ -2,7 +2,7 @@
     display: none;
 }
 
-.wrapper {
+.content-wrapper {
     max-width: 1440px;
     margin: 0 auto;
     width: 100%;
@@ -33,9 +33,6 @@
     justify-content: flex-end;
     height: auto;
     position: relative;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
 }
 
 .hero-img {
@@ -93,6 +90,7 @@ h1 {
     display: flex;
     width: 100%;
     position: relative;
+    z-index: 1;
 }
 
 .product-list {
@@ -112,7 +110,7 @@ h1 {
     flex-direction: column;
 }
 
-.color-container {
+.overlay-container {
     background-color: #E76C1F;
     display: flex;
     width: 100%;

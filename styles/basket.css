@@ -1,6 +1,12 @@
-.basket-modal{
+.basket-wrapper {
+    display: flex;
+    justify-content: flex-end;
     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
+    z-index: 2;
 }
 
 .basket {
@@ -67,13 +73,14 @@
 .control-btn {
     display: flex;
     align-items: center;
-    justify-content: center;;
+    justify-content: center;
+    ;
     font-size: 24px;
     font-family: 'Palanquin', sans-serif;
     padding: 0;
 }
 
-.trash-icon img{
+.trash-icon img {
     height: 20px;
     width: 20px;
 }
