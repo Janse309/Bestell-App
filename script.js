@@ -1,18 +1,12 @@
 let basket = [];
 
+const dialog = document.getElementById('dialog');
+
+
 function init() {
     renderDishes();
     renderBasket();
 }
-
-// function renderDishes() {
-//     let contentRef = document.getElementById(index, containerId);
-//     contentRef.innerHTML = "";
-
-//     for (let index = 0; index < dishes.length; index++) {
-//         contentRef.innerHTML += getDishTemplate(index);
-//     }
-// }
 
 function renderDishes() {
     for (let index = 0; index < dishes.length; index++) {
@@ -103,8 +97,11 @@ function placeOrder() {
 }
 
 function openDialog() {
-    const dialog = document.getElementById('dialog')
     dialog.showModal();
+}
+
+function closeDialog() {
+    dialog.close(); // Das schließt das HTML-Dialog-Element
 }
 
 
@@ -112,7 +109,7 @@ function openDialog() {
 // responsive
 // Dialog positionieren
 // local Storage einfügen
-
+// Warenkorb in die Content Begrenzung einfügen
 // Problem mit dem Button und dem Minus und Plus beheben
-
+// Scrollbar im Warenkorb schöner machen
 // Warenkorb mit true und false öffnen und scließen ?

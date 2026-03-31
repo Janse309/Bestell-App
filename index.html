@@ -62,23 +62,23 @@
 
                 <section class="food-container" id="burger-section">
                     <div class="overlay-container">
-                        <div class="seperator-content wrapper">
+                        <div class="seperator-content content-wrapper">
                             <img src="./assets/img/burger_seperator.svg" alt="Burger">
                             <h2>Burger&Sandwiches</h2>
                         </div>
                     </div>
-                    <div class="food-list" id="burger-list"></div>
+                    <div class="food-list content-wrapper" id="burger-list"></div>
                 </section>
 
                 <section class="food-container" id="pizza-section">
                     <div class="overlay-container">
-                        <div class="seperator-content wrapper">
+                        <div class="seperator-content content-wrapper">
                             <img src="./assets/img/pizza_seperator.svg" alt="Burger">
                             <h2>Pizza</h2>
                             <p>(30cm)</p>
                         </div>
                     </div>
-                    <div class="food-list" id="pizza-list"></div>
+                    <div class="food-list content-wrapper" id="pizza-list"></div>
                 </section>
 
                 <section class="food-container" id="salat-section">
@@ -88,38 +88,43 @@
                             <h2>Salat</h2>
                         </div>
                     </div>
-                    <div class="food-list" id="salat-list"></div>
+                    <div class="food-list content-wrapper" id="salat-list"></div>
                 </section>
 
             </section>
 
-            <aside id="basket-modal" class="basket-wrapper d_none">
-                <section class="basket">
-                    <div>
-                        <h2 class="basket-headline">Warenkorb</h2>
-                        <div id="basket-list"></div>
-                    </div>
-                    <div class="totals">
-                        <div class="basket-text">
-                            <p>Zwischensumme:</p>
-                            <p class="calculated-price" id="subtotal">0,00 €</p>
-                        </div>
-                        <div class="basket-text border">
-                            <p>Lieferkosten:</p>
-                            <p class="calculated-price">3,00 €</p>
-                        </div>
+            <aside id="basket-modal" class="d_none">
+                <section class="basket-wrapper">
+                    <div class="basket">
                         <div>
+                            <h2 class="basket-headline">Warenkorb</h2>
+                            <div id="basket-list"></div>
+                        </div>
+                        <div class="totals">
                             <div class="basket-text">
-                                <p>Gesamt:</p>
-                                <p class="calculated-price" id="total">0,00 €</p>
+                                <p>Zwischensumme:</p>
+                                <p class="calculated-price" id="subtotal">0,00 €</p>
                             </div>
-                            <button onclick="placeOrder()" id="order" class="order-btn">Buy now </button>
+                            <div class="basket-text border">
+                                <p>Lieferkosten:</p>
+                                <p class="calculated-price">3,00 €</p>
+                            </div>
+                            <div>
+                                <div class="basket-text">
+                                    <p>Gesamt:</p>
+                                    <p class="calculated-price" id="total">0,00 €</p>
+                                </div>
+                                <button onclick="placeOrder()" id="order" class="order-btn">Buy now </button>
+                            </div>
                         </div>
                     </div>
                 </section>
             </aside>
 
             <dialog id="dialog">
+                <div class="x-btn">
+                    <button onclick="closeDialog()">x</button>
+                </div>
                 <section class="dialog-section">
                     <div class="order-dialog">
                         <img src="./assets/img/purcheOrder.svg" alt="DeliverCar">

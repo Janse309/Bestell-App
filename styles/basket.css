@@ -1,19 +1,29 @@
-.basket-wrapper {
-    display: flex;
-    justify-content: flex-end;
+#basket-modal {
     position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    z-index: 10;
+
+}
+
+.basket-wrapper {
     top: 0;
     right: 0;
-    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    max-width: 1440px;
+    margin: 0 auto;
     width: 100%;
-    z-index: 2;
+    position: sticky;
 }
 
 .basket {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: sticky;
     height: 794px;
     width: 435px;
     top: 0;
@@ -25,12 +35,11 @@
     font-family: 'Palanquin', sans-serif;
     font-size: 20px;
     font-weight: 400;
-    max-width: 1440px;
 }
 
 .basket-headline {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: bold;
     text-align: center;
     padding-bottom: 16px;
 }
@@ -74,7 +83,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    ;
     font-size: 24px;
     font-family: 'Palanquin', sans-serif;
     padding: 0;

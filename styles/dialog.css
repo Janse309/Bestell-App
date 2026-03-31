@@ -1,4 +1,5 @@
 dialog {
+   
     background-color: #363534;
     color: #FDEADC;
     font-family: 'Palanquin_700', sans-serif;
@@ -8,13 +9,18 @@ dialog {
     animation-duration: 5s;
 }
 
-dialog h2{
+
+dialog h2 {
     font-size: 40px;
     font-weight: bold;
 }
 
-dialog p{
+dialog p {
     font-size: 32px;
+}
+
+.x-btn button {
+    color: white;
 }
 
 .dialog-section {
