@@ -1,14 +1,41 @@
-dialog {
-   
-    background-color: #363534;
-    color: #FDEADC;
-    font-family: 'Palanquin_700', sans-serif;
-    border-radius: 32px;
-    border: none;
-    animation: slideIn 0.3s ease-out 0s 1 normal none;
-    animation-duration: 5s;
+.dialog-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 50%;
 }
 
+dialog {
+    margin: auto;
+    padding: 0;
+    border: none;
+    border-radius: 32px;
+    background: transparent;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    /* Optional: macht den Hintergrund leicht unscharf */
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border: none;
+    border-radius: 32px;
+    padding: 24px;
+
+    background-color: #363534;
+    font-family: 'Palanquin_700', sans-serif;
+    color: #FDEADC;
+}
 
 dialog h2 {
     font-size: 40px;
@@ -19,7 +46,13 @@ dialog p {
     font-size: 32px;
 }
 
-.x-btn button {
+.x-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.x-btn-container button {
     color: white;
 }
 

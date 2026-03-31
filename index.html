@@ -121,19 +121,24 @@
                 </section>
             </aside>
 
-            <dialog id="dialog">
-                <div class="x-btn">
-                    <button onclick="closeDialog()">x</button>
-                </div>
-                <section class="dialog-section">
-                    <div class="order-dialog">
-                        <img src="./assets/img/purcheOrder.svg" alt="DeliverCar">
-                        <h2>Bestellung bestätigt!</h2>
-                        <p>Ihr Essen ist unterwegs!</p>
-                    </div>
-                </section>
-            </dialog>
+            <div class="dialog-wrapper">
+                <dialog id="dialog">
+                    <div class="overlay">
+                        <div class="x-btn-container">
+                            <button onclick="closeDialog()"><img src="./assets/icons/close.svg"
+                                    alt="close dialog"></button>
+                        </div>
+                        <section class="dialog-section">
 
+                            <div class="order-dialog">
+                                <img src="./assets/img/purcheOrder.svg" alt="DeliverCar">
+                                <h2>Bestellung bestätigt!</h2>
+                                <p>Ihr Essen ist unterwegs!</p>
+                            </div>
+                        </section>
+                    </div>
+                </dialog>
+            </div>
         </div>
     </main>
 

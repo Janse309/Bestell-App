@@ -1,7 +1,5 @@
 let basket = [];
-
 const dialog = document.getElementById('dialog');
-
 
 function init() {
     renderDishes();
@@ -94,6 +92,10 @@ function placeOrder() {
     renderBasket();
     closeBasket();
     openDialog();
+
+    setTimeout(() => {
+        closeDialog();
+    }, 3000);
 }
 
 function openDialog() {
@@ -107,7 +109,6 @@ function closeDialog() {
 
 // basket mit button(preis) ergänzen
 // responsive
-// Dialog positionieren
 // local Storage einfügen
 // Warenkorb in die Content Begrenzung einfügen
 // Problem mit dem Button und dem Minus und Plus beheben
