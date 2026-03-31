@@ -1,3 +1,8 @@
+.basket-modal{
+    position: absolute;
+    width: 100%;
+}
+
 .basket {
     display: flex;
     flex-direction: column;
@@ -14,6 +19,7 @@
     font-family: 'Palanquin', sans-serif;
     font-size: 20px;
     font-weight: 400;
+    max-width: 1440px;
 }
 
 .basket-headline {
