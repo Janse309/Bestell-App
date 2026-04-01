@@ -1,10 +1,8 @@
-#basket-modal {
-    position: absolute;
+.basket-container {
+    position: sticky;
     right: 0;
     top: 0;
     height: 100%;
-    margin: 0 auto;
-    max-width: 1440px;
     z-index: 10;
 }
 
@@ -13,10 +11,6 @@
     right: 0;
     display: flex;
     align-items: flex-start;
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
-    position: sticky;
     padding-top: 16px;
     padding-bottom: 16px;
     border-radius: 32px 0 0 32px;
@@ -24,6 +18,7 @@
 }
 
 .basket {
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;

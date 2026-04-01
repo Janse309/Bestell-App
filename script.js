@@ -1,9 +1,23 @@
-let basket = [];
+let basket = JSON.parse(localStorage.getItem("basket")) || [];
 const dialog = document.getElementById('dialog');
 
 function init() {
+    getItemFromLocalStorage();
     renderDishes();
     renderBasket();
+
+    if (basket.length > 0) {
+        openBasket();
+    }
+}
+
+function saveItemToLocalStorage() {
+  localStorage.setItem("basket", JSON.stringify(basket));
+}
+
+function getItemFromLocalStorage() {
+  const saved = localStorage.getItem("basket");
+  basket = saved ? JSON.parse(saved) : [];
 }
 
 function renderDishes() {
@@ -54,11 +68,13 @@ function addToBasket(index) {
             "amount": 1
         });
     }
+    saveItemToLocalStorage();
     renderBasket();
 }
 
 function deleteItem(index) {
     basket.splice(index, 1);
+    saveItemToLocalStorage();
     renderBasket();
     closeBasket();
 }
@@ -74,6 +90,7 @@ function changeAmount(index, change) {
         basket.splice(index, 1);
     }
     renderBasket();
+    saveItemToLocalStorage();
 }
 
 function openBasket() {
@@ -84,11 +101,14 @@ function closeBasket() {
     // Wenn die Länge des Warenkorbs 0 ist, ist er leer
     if (basket.length === 0) {
         document.getElementById('basket-modal').classList.add('d_none');
+    } else {
+        document.getElementById('basket-modal').classList.remove('d_none');
     }
 }
 
 function placeOrder() {
     basket = [];
+    localStorage.removeItem("myBasket");
     renderBasket();
     closeBasket();
     openDialog();
@@ -107,10 +127,8 @@ function closeDialog() {
 }
 
 
-// basket mit button(preis) ergänzen
+// basket mit button(preis) ergänzen (Bonus)
 // responsive
-// local Storage einfügen
 // Warenkorb in die Content Begrenzung einfügen
-// Problem mit dem Button und dem Minus und Plus beheben
-// Scrollbar im Warenkorb schöner machen
+// Problem mit dem Button und dem Minus und Plus beheben    
 // Warenkorb mit true und false öffnen und scließen ?
