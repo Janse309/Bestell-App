@@ -72,6 +72,10 @@ function addToBasket(index) {
     renderBasket();
 }
 
+function addedItem() {
+    document.getElementById('addedItem-btn').classList.remove('d_none');
+}
+
 function deleteItem(index) {
     basket.splice(index, 1);
     saveItemToLocalStorage();

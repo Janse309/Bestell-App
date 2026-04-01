@@ -21,3 +21,13 @@ button {
     font-family: 'Palanquin_400', sans-serif;
     font-weight: bold;
 }
+
+.addedItem-btn{
+    padding: 5px 8px;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 16px;
+    font-family: 'Palanquin_400', sans-serif;
+    font-weight: bold;
+    color: #E76E26;
+}
