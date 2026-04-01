@@ -109,7 +109,7 @@ h1 {
     flex-direction: column;
 }
 
-.overlay-container {
+.category-banner {
     height: 60px;
     width: 100%;
     display: flex;
