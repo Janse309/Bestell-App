@@ -98,7 +98,6 @@ function openBasket() {
 }
 
 function closeBasket() {
-    // Wenn die Länge des Warenkorbs 0 ist, ist er leer
     if (basket.length === 0) {
         document.getElementById('basket-modal').classList.add('d_none');
     } else {
@@ -127,7 +126,7 @@ function closeDialog() {
 }
 
 
-// basket mit button(preis) ergänzen (Bonus)
+// basket mit button(preis) ergänzen
 // responsive
 // Warenkorb in die Content Begrenzung einfügen
 // Problem mit dem Button und dem Minus und Plus beheben    
