@@ -130,6 +130,8 @@ function closeDialog() {
 }
 
 
+// added Button function bearbeiten
+// erst ab Punkt 2 Mülltonne anzeigen lassen
 // basket mit button(preis) ergänzen
 // responsive
 // Warenkorb in die Content Begrenzung einfügen

@@ -92,6 +92,8 @@ h1 {
     display: flex;
     align-items: flex-start;
     width: 100%;
+    justify-content: center;
+
 }
 
 .product-list {
@@ -100,7 +102,7 @@ h1 {
     flex-direction: column;
     color: #363634;
     font-size: 24px;
-    flex: 1;
+    width: 100%;
 }
 
 .food-container {
