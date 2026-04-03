@@ -1,6 +1,8 @@
 let basket = JSON.parse(localStorage.getItem("basket")) || [];
 const dialog = document.getElementById('dialog');
-let categories = ["Pizza", "Burger", "Salat"];
+let burgerList = document.getElementById('burger-list');
+let pizzaList = document.getElementById('pizza-list');
+let salatList = document.getElementById('salat-list');
 
 function init() {
     getItemFromLocalStorage();
@@ -22,23 +24,35 @@ function getItemFromLocalStorage() {
 }
 
 function renderDishes() {
-    document.getElementById('burger-list').innerHTML = "";
-    document.getElementById('pizza-list').innerHTML = "";
-    document.getElementById('salat-list').innerHTML = "";
+    const containers = { "Burger & Sandwiches": burgerList, "Pizza": pizzaList, "Salad": salatList };
+    Object.values(containers).forEach(list => list.innerHTML = "");
 
     for (let index = 0; index < dishes.length; index++) {
-        let dish = dishes[index];
-        let template = getDishTemplate(index);
-
-        if (dish.category === "Burger & Sandwiches") {
-            document.getElementById('burger-list').innerHTML += template;
-        } else if (dish.category === "Pizza") {
-            document.getElementById('pizza-list').innerHTML += template;
-        } else if (dish.category === "Salad") {
-            document.getElementById('salat-list').innerHTML += template;
-        }
+        const dish = dishes[index];
+        const targetList = containers[dish.category];
+        if (targetList) targetList.innerHTML += getDishTemplate(index);
     }
 }
+
+// function renderDishes() {
+//     burgerList.innerHTML = "";
+//     pizzaList.innerHTML = "";
+//     salatList.innerHTML = "";
+
+//     for (let index = 0; index < dishes.length; index++) {
+//         let dish = dishes[index];
+//         let template = getDishTemplate(index);
+
+//         if (dish.category === "Burger & Sandwiches") {
+//             burgerList.innerHTML += template;
+//         } else if (dish.category === "Pizza") {
+//             pizzaList.innerHTML += template;
+//         } else if (dish.category === "Salad") {
+//             salatList.innerHTML += template;
+//         }
+//     }
+// }
+
 
 function renderBasket() {
     let basketRef = document.getElementById('basket-list')
