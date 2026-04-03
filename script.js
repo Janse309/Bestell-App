@@ -1,5 +1,6 @@
 let basket = JSON.parse(localStorage.getItem("basket")) || [];
 const dialog = document.getElementById('dialog');
+let categories = ["Pizza", "Burger", "Salat"];
 
 function init() {
     getItemFromLocalStorage();
@@ -21,6 +22,10 @@ function getItemFromLocalStorage() {
 }
 
 function renderDishes() {
+    document.getElementById('burger-list').innerHTML = "";
+    document.getElementById('pizza-list').innerHTML = "";
+    document.getElementById('salat-list').innerHTML = "";
+
     for (let index = 0; index < dishes.length; index++) {
         let dish = dishes[index];
         let template = getDishTemplate(index);
@@ -70,10 +75,14 @@ function addToBasket(index) {
     }
     saveItemToLocalStorage();
     renderBasket();
+    renderDishes();
 }
 
-function addedItem() {
-    document.getElementById('addedItem-btn').classList.remove('d_none');
+function getBasketStatus(dishName) {
+  const item = basket.find((index) => index.name === dishName);
+  return item && item.amount > 0
+    ? `<span class="added-badge">Added ${item.amount}</span>`
+    : "";
 }
 
 function deleteItem(index) {
@@ -93,8 +102,9 @@ function changeAmount(index, change) {
     if (basket[index].amount <= 0) {
         basket.splice(index, 1);
     }
-    renderBasket();
     saveItemToLocalStorage();
+    renderBasket();
+    renderDishes();
 }
 
 function openBasket() {
@@ -111,8 +121,10 @@ function closeBasket() {
 
 function placeOrder() {
     basket = [];
-    localStorage.removeItem("myBasket");
+    localStorage.removeItem("basket");
+
     renderBasket();
+    renderDishes();
     closeBasket();
     openDialog();
 
@@ -130,7 +142,6 @@ function closeDialog() {
 }
 
 
-// added Button function bearbeiten
 // erst ab Punkt 2 Mülltonne anzeigen lassen
 // basket mit button(preis) ergänzen
 // responsive

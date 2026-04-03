@@ -6,7 +6,7 @@
     background-color: #E76C1F;
 }
 
-.content-wrapper{
+.content-wrapper {
     padding: 0px max(calc(50% - 720px), 0px);
 }
 
@@ -15,9 +15,7 @@
     align-items: center;
     justify-content: space-between;
     height: 128px;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 0px max(calc(50% - 720px), 20px);
 }
 
 .hero-section {
@@ -90,10 +88,9 @@ h1 {
 .splitt_view_container {
     position: relative;
     display: flex;
-    align-items: flex-start;
-    width: 100%;
     justify-content: center;
-
+    flex-direction: row;
+    z-index: 1;
 }
 
 .product-list {
@@ -102,13 +99,15 @@ h1 {
     flex-direction: column;
     color: #363634;
     font-size: 24px;
+    padding: 20px;
     width: 100%;
 }
 
 .food-container {
     display: flex;
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;
+    
 }
 
 .category-banner {
@@ -117,6 +116,7 @@ h1 {
     align-items: center;
     margin-bottom: 40px;
     position: relative;
+    z-index: 1;
     background-color: #e76c1f;
     padding: 0px max(calc(50% - 720px), 0px);
 }
@@ -132,7 +132,6 @@ h1 {
 .seperator-content h2 {
     font-weight: bold;
     font-size: 40px;
-
 }
 
 .seperator-content p {
@@ -224,4 +223,3 @@ h1 {
 .page-footer-content a {
     color: #FDEADC;
 }
-
