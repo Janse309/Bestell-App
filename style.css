@@ -2,12 +2,16 @@
     display: none;
 }
 
+/* padding: 0px max(calc(50% - 720px), 20px); */
+
 .page-header {
     background-color: #E76C1F;
 }
 
 .content-wrapper {
-    padding: 0px max(calc(50% - 720px), 0px);
+    margin: 0px auto;
+    max-width: 1440px;
+    
 }
 
 .header-content {
@@ -15,7 +19,6 @@
     align-items: center;
     justify-content: space-between;
     height: 128px;
-    padding: 0px max(calc(50% - 720px), 20px);
 }
 
 .hero-section {
@@ -70,7 +73,7 @@ h1 {
     color: #726D6D;
     font-weight: normal;
     font-size: 14px;
-    font-family: 'Palanquin_400', sans-serif;
+    font-family: 'Palanquin', sans-serif;
     font-weight: bold;
 }
 
@@ -80,7 +83,8 @@ h1 {
 
 .headline-description {
     text-align: center;
-    font-family: 'Palanquin_700', sans-serif;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
     color: #363634;
     font-size: 24px;
 }
@@ -94,7 +98,8 @@ h1 {
 }
 
 .product-list {
-    font-family: 'Palanquin_400', sans-serif;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     color: #363634;
@@ -107,14 +112,12 @@ h1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
 }
 
 .category-banner {
     height: 60px;
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
     position: relative;
     z-index: 1;
     background-color: #e76c1f;
@@ -145,7 +148,8 @@ h1 {
 .food-list {
     display: flex;
     flex-direction: column;
-    margin: 32px auto;
+    padding: 40px 0;
+    gap: 24px;
 }
 
 .dish-headline {
@@ -156,21 +160,16 @@ h1 {
     display: flex;
     align-items: center;
     padding: 0 20px;
-    height: 132px;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.dish-card:nth-child(n) {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    height: auto;
+    width: 1000px;
 }
 
 .meal-container {
     display: flex;
     background-color: #FDEADC;
-    padding: 16px;
+    padding: 20px;
     border-radius: 12px;
+    width: 100%;
 }
 
 .dish-image-container {
@@ -181,27 +180,30 @@ h1 {
 .dish-information-container {
     display: flex;
     flex-direction: column;
-    width: 469px;
+    width: 100%;
 }
 
 .dish-information-container h3 {
     text-align: left;
 }
 
-.dish-price p {
-    text-align: right;
-}
-
 .dish-description {
-    font-family: 'Palanquin_400', sans-serif;
+    font-family: 'Palanquin', sans-serif;
     font-size: 16px;
+    font-weight: 400;
 }
 
 .dish-price {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     font-weight: 700;
+    width: 100%;
+}
+
+.dish-price p {
+    text-align: right;
 }
 
 .page-footer {
@@ -213,7 +215,8 @@ h1 {
     align-items: center;
     justify-content: space-around;
     height: 128px;
-    font-family: 'Palanquin_400', sans-serif;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
     font-size: 18px;
     color: white;
     max-width: 1440px;

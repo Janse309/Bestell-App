@@ -31,8 +31,8 @@
     padding: 0 16px 16px 24px;
     border-radius: 30px 0 0 30px;
     font-family: 'Palanquin', sans-serif;
-    font-size: 20px;
     font-weight: 400;
+    font-size: 20px;
 }
 
 .basket-headline {
@@ -62,7 +62,7 @@
     justify-content: space-between;
 }
 
-.basket-controls h3 {
+.basket-item-details h3{
     font-size: 24px;
 }
 
@@ -70,6 +70,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.basket-controls h3 {
+    font-size: 24px;
 }
 
 .basket-counter {
@@ -104,7 +108,10 @@
 .basket-text {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8px;
+}
+
+.bold{
+    font-weight: bold;
 }
 
 .calculated-price p {
@@ -119,7 +126,8 @@
     margin-top: 8px;
     color: white;
     background-color: #E76C1F;
-    font-family: 'Palanquin_700', sans-serif;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
     border-radius: 16px;
     font-size: 32px;
     width: 100%;

@@ -23,7 +23,7 @@
 
 <body onload="init()">
     <header class="page-header">
-        <section class="header-content">
+        <section class="header-content content-wrapper">
             <div>
                 <img src="./assets/img/main-logo.svg" alt="Logo">
             </div>
@@ -89,7 +89,7 @@
                             <h2>Salat</h2>
                         </div>
                     </div>
-                    <div class="food-list" id="salat-list"></div>
+                    <div class="food-list content-wrapper" id="salat-list"></div>
                 </section>
 
             </section>
@@ -112,8 +112,8 @@
                             </div>
                             <div>
                                 <div class="basket-text">
-                                    <p>Gesamt:</p>
-                                    <p class="calculated-price" id="total">0,00 €</p>
+                                    <p class="bold">Gesamt:</p>
+                                    <p class="calculated-price bold" id="total">0,00 €</p>
                                 </div>
                                 <button onclick="placeOrder()" id="order" class="order-btn">Buy now </button>
                             </div>

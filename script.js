@@ -54,7 +54,7 @@ function renderTotals() {
     let subtotal = 0;
     basket.forEach(item => subtotal += (item.price) * (item.amount))
 
-    let delivery = subtotal > 0 ? 5.00 : 0;
+    let delivery = subtotal > 0 ? 3.00 : 0;
     let total = subtotal + delivery;
 
     document.getElementById('subtotal').innerHTML = `${subtotal.toFixed(2).replace('.', ',')} €`;
@@ -89,6 +89,7 @@ function deleteItem(index) {
     basket.splice(index, 1);
     saveItemToLocalStorage();
     renderBasket();
+    renderDishes();
     closeBasket();
 }
 

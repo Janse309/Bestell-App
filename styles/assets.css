@@ -18,7 +18,8 @@ button {
     border-radius: 20px;
     background-color: white;
     font-size: 16px;
-    font-family: 'Palanquin_400', sans-serif;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
     font-weight: bold;
 }
 
@@ -27,7 +28,8 @@ button {
     border-radius: 20px;
     background-color: white;
     font-size: 16px;
-    font-family: 'Palanquin_400', sans-serif;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
     font-weight: bold;
     color: #E76E26;
 }
