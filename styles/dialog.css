@@ -31,6 +31,8 @@ dialog::backdrop {
     font-family: 'Palanquin', sans-serif;
     font-weight: 700;
     color: #FDEADC;
+    animation: slideIn 0.3s ease-out;
+
 }
 
 dialog h2 {
@@ -65,4 +67,16 @@ dialog p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
