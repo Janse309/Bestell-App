@@ -136,9 +136,7 @@ function closeDialog() {
 }
 
 
-// erst ab Punkt 2 Mülltonne anzeigen lassen
 // basket mit button(preis) ergänzen
 // responsive
 // Warenkorb in die Content Begrenzung einfügen
 // Problem mit dem Button und dem Minus und Plus beheben    
-// Warenkorb mit true und false öffnen und scließen ?

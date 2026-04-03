@@ -1,9 +1,9 @@
 .basket-container {
+    width: 440px;            /* Feste Breite für den Warenkorb */
     position: sticky;
     top: 0;
-    right: 0;
-    height: 100%;
     z-index: 10;
+    height: 100%;
 }
 
 .basket-wrapper {
@@ -70,8 +70,7 @@
 .basket-controls {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 40px;
+    align-items: center;  
 }
 
 .basket-controls h3 {
@@ -82,8 +81,6 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    width: 80px;
-    height: 40px;
 }
 
 .control-btn {

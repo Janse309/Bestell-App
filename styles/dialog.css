@@ -13,6 +13,7 @@ dialog {
     border: none;
     border-radius: 32px;
     background: transparent;
+    overflow-y: hidden;
 }
 
 dialog::backdrop {

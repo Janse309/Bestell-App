@@ -4,7 +4,7 @@ function getDishTemplate(index) {
     <div class="dish-card">
         <div class="meal-container">
             <div class="dish-image-container">
-                <img src="${dish.image}" alt="${dishes.name}">
+                <img src="${dish.image}" alt="${dish.name}">
             </div>
             <div class="dish-information-container">
                 <h3 class="dish-headline">${dish.name}</h3>
