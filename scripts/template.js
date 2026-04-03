@@ -26,17 +26,20 @@ function getBasketTemplate(item, index) {
     let totalItemPrice = item.price * item.amount;
     let trashIcon = item.amount === 1 
         ? `<button onclick="deleteItem()" class="trash-icon"><img src="./assets/icons/delete.svg" alt="Löschen"></button>` : `-`;
+    let trashClass = item.amount > 1 ? "" : "d_none";
     return `
         <div class="basket-item">
             <div class="basket-item-details">
                 <h3>${item.name}</h3>
-                <button onclick="deleteItem()" class="trash-icon"><img src="./assets/icons/delete.svg" alt="Löschen"></button> 
+                <button onclick="deleteItem(${index})" class="trash-icon ${trashClass}">
+                <img src="./assets/icons/delete.svg" alt="Löschen">
+                </button> 
             </div>
             <div class="basket-controls">
                 <div class="basket-counter">
                     <button class="control-btn" onclick="changeAmount(${index}, -1)">${trashIcon}</button>
                     <span class="amount-display">${item.amount}</span>
-                    <button class="control-btn" onclick="changeAmount(${index}, 1)">+</button>
+                    <button class="control-btn" onclick="changeAmount(${index}, 1); addTrashContainer()">+</button>
                 </div>
                 <div>${totalItemPrice.toFixed(2).replace('.', ',')} €</div>
             </div>  

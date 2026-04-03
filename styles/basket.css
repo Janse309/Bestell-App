@@ -21,7 +21,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 794px;
-    width: 435px;
+    width: 400px;
     top: 0;
     overflow-y: auto;
     scrollbar-width: thin;
@@ -46,6 +46,7 @@
 .basket-item {
     display: flex;
     flex-direction: column;
+    width: 100%;
     background-color: #FDEADC;
     margin-bottom: 16px;
     padding: 24px;
@@ -70,6 +71,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 40px;
 }
 
 .basket-controls h3 {
@@ -80,15 +82,17 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    width: 80px;
+    height: 40px;
 }
 
 .control-btn {
     display: flex;
-    align-items: center;
     justify-content: center;
     font-size: 24px;
     font-family: 'Palanquin', sans-serif;
     padding: 0;
+    align-items: flex-end;
 }
 
 .trash-icon img {

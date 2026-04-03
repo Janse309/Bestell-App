@@ -34,26 +34,6 @@ function renderDishes() {
     }
 }
 
-// function renderDishes() {
-//     burgerList.innerHTML = "";
-//     pizzaList.innerHTML = "";
-//     salatList.innerHTML = "";
-
-//     for (let index = 0; index < dishes.length; index++) {
-//         let dish = dishes[index];
-//         let template = getDishTemplate(index);
-
-//         if (dish.category === "Burger & Sandwiches") {
-//             burgerList.innerHTML += template;
-//         } else if (dish.category === "Pizza") {
-//             pizzaList.innerHTML += template;
-//         } else if (dish.category === "Salad") {
-//             salatList.innerHTML += template;
-//         }
-//     }
-// }
-
-
 function renderBasket() {
     let basketRef = document.getElementById('basket-list')
     basketRef.innerHTML = "";
@@ -95,8 +75,7 @@ function addToBasket(index) {
 function getBasketStatus(dishName) {
   const item = basket.find((index) => index.name === dishName);
   return item && item.amount > 0
-    ? `<span class="added-badge">Added ${item.amount}</span>`
-    : "";
+    ? `<span class="added-badge">Added ${item.amount}</span>` : "";
 }
 
 function deleteItem(index) {
@@ -106,10 +85,6 @@ function deleteItem(index) {
     renderDishes();
     closeBasket();
 }
-
-// function priceButton() {
-//     document.getElementById('orderPrice').innerHTML = "hallo";
-// }
 
 function changeAmount(index, change) {
     basket[index].amount += change;
@@ -146,6 +121,10 @@ function placeOrder() {
     setTimeout(() => {
         closeDialog();
     }, 3000);
+}
+
+function addTrashContainer() {
+    document.getElementById('trash').classList.remove('d_none');
 }
 
 function openDialog() {
