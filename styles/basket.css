@@ -35,6 +35,13 @@
     font-size: 20px;
 }
 
+#basket-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+}
+
 .basket-headline {
     font-size: 32px;
     font-weight: bold;
@@ -49,22 +56,22 @@
     width: 100%;
     background-color: #FDEADC;
     margin-bottom: 16px;
-    padding: 24px;
+    padding: 18px;
     border-radius: 24px;
     color: #363534;
     font-weight: bold;
     justify-content: center;
-    gap: 8px;
 }
 
 .basket-item-details {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .basket-item-details h3{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .basket-controls {
@@ -132,4 +139,8 @@
     border-radius: 16px;
     font-size: 32px;
     width: 100%;
+}
+
+.nav-bar{
+    display: none;
 }

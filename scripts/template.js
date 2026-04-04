@@ -42,6 +42,7 @@ function getBasketTemplate(item, index) {
                     <button class="control-btn" onclick="changeAmount(${index}, 1); addTrashContainer()">+</button>
                 </div>
                 <div>${totalItemPrice.toFixed(2).replace('.', ',')} €</div>
+                
             </div>  
         </div>
     `;

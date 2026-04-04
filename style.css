@@ -2,6 +2,10 @@
     display: none;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /* padding: 0px max(calc(50% - 720px), 20px); */
 
 .page-header {
@@ -239,3 +243,29 @@ h1 {
 .page-footer-content a {
     color: #FDEADC;
 }
+
+.nav-bar{
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    width: 100%;
+    max-width: 375px;
+    height: 78px;
+    background-color: #363534;
+    border-radius: 0 0 16px 16px;
+    z-index: 1000;
+}
+
+/* @media(max-width: 800px){
+    .nav-bar{
+        display: flex;
+    }
+
+    body {
+        padding-bottom: 80px; /* Platzhalter für die Nav-Bar */
+    /* } */
+/* } */ 
