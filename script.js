@@ -15,12 +15,12 @@ function init() {
 }
 
 function saveItemToLocalStorage() {
-  localStorage.setItem("basket", JSON.stringify(basket));
+    localStorage.setItem("basket", JSON.stringify(basket));
 }
 
 function getItemFromLocalStorage() {
-  const saved = localStorage.getItem("basket");
-  basket = saved ? JSON.parse(saved) : [];
+    const saved = localStorage.getItem("basket");
+    basket = saved ? JSON.parse(saved) : [];
 }
 
 function renderDishes() {
@@ -73,9 +73,9 @@ function addToBasket(index) {
 }
 
 function getBasketStatus(dishName) {
-  const item = basket.find((index) => index.name === dishName);
-  return item && item.amount > 0
-    ? `<span class="added-badge">Added ${item.amount}</span>` : "";
+    const item = basket.find((index) => index.name === dishName);
+    return item && item.amount > 0
+        ? `<span class="added-badge">Added ${item.amount}</span>` : "";
 }
 
 function deleteItem(index) {
@@ -99,6 +99,18 @@ function changeAmount(index, change) {
 
 function openBasket() {
     document.getElementById('basket-modal').classList.remove('d_none');
+
+    const isEmpty = basket.length === 0;
+    document.getElementById('totals').classList.toggle('d_none', isEmpty);
+    document.getElementById('empty-basket').classList.toggle('d_none', !isEmpty);
+
+    // if (basket.length === 0) {
+    //     document.getElementById('totals').classList.add('d_none');
+    //     document.getElementById('empty-basket').classList.remove('d_none');
+    // } else {
+    //     document.getElementById('totals').classList.remove('d_none');
+    //     document.getElementById('empty-basket').classList.add('d_none');
+    // }
 }
 
 function closeBasket() {

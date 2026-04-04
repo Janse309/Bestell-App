@@ -1,5 +1,5 @@
 .d_none {
-    display: none;
+    display: none !important;
 }
 
 body{
@@ -34,6 +34,7 @@ body{
     align-items: center;
     justify-content: flex-end;
     height: auto;
+    position: relative; /* Dies ist der neue Ankerpunkt für .burger-img */
 }
 
 .hero-img {
@@ -41,14 +42,21 @@ body{
     height: auto;
     object-fit: cover;
     display: block;
+    position: relative;
 }
 
 .burger-img {
     position: absolute;
+    /* Höhe und Breite sind gut */
     height: 200px;
     width: 200px;
     object-fit: cover;
-    bottom: -15%;
+    z-index: 10; /* Optional: Um sicherzugehen, dass es über dem Hero-Bild liegt */
+    
+    /* POSITIONIERUNG: */
+    left: 50%;          /* Positioniert die linke Kante des Logos in der Mitte des Containers */
+    transform: translateX(-50%); /* Verschiebt das Logo um 50% seiner eigenen Breite nach links, um es perfekt zu zentrieren */
+    bottom: -100px;
 }
 
 .hero-headline-section {
@@ -92,11 +100,11 @@ h1 {
 }
 
 .splitt_view_container {
-    width: 1440px;
-    max-width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    position: relative;
+    z-index: 1;
 }
 
 .product-list {
@@ -107,7 +115,6 @@ h1 {
     justify-content: center;
     color: #363634;
     font-size: 24px;
-    padding: 20px;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -130,18 +137,19 @@ h1 {
     margin-bottom: 40px;
     position: relative;
     z-index: 1;
+    background-color: #e76c1f;
 }
 
-.category-banner::before{
+/* .category-banner::before{
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -50vw;
-    right: -50vw;
+    left: -50%;
+    right: -50%;
     background-color: #e76c1f;
     z-index: -1;  
-}
+} */
 
 .seperator-content {
     display: flex;

@@ -24,7 +24,7 @@
 <body onload="init()">
     <header class="page-header">
         <section class="header-content content-wrapper wrapper-mobile">
-            <div>
+            <div id="home">
                 <img src="./assets/img/main-logo.svg" alt="Logo">
             </div>
             <div>
@@ -57,13 +57,13 @@
             </div>
         </section>
 
-        <section class="splitt_view_container content-wrapper"> <!--ContentWrapper-->
+        <section class="splitt_view_container"> <!--ContentWrapper-->
 
             <section id="product_list" class="product-list">
 
                 <section class="food-container" id="burger-section">
                     <div class="category-banner">
-                        <div class="seperator-content content-wrapper wrapper-mobile">
+                        <div class="seperator-content content-wrapper">
                             <img src="./assets/img/burger_seperator.svg" alt="Burger">
                             <h2>Burger&Sandwiches</h2>
                         </div>
@@ -94,15 +94,22 @@
 
             </section>
 
-
             <aside id="basket-modal" class="d_none basket-container">
                 <section class="basket-wrapper">
                     <div class="basket">
-                        <div>
-                            <h2 class="basket-headline">Warenkorb</h2>
-                            <div id="basket-list"></div>
+                        <h2 class="basket-headline">Warenkorb</h2>
+                        <div id="empty-basket" class="empty-basket d_none">
+                            <p>Nothing here yet.</p>
+                            <p>Go ahead and choose something</p>
+                            <p>delicious!</p>
+                            <div>
+                                <img src="./assets/img/shopping_cart_white.png" alt="empty basket">
+                            </div>
                         </div>
-                        <div class="totals">
+
+                        <div id="basket-list"></div>
+
+                        <div id="totals" class="totals">
                             <div class="basket-text">
                                 <p>Zwischensumme:</p>
                                 <p class="calculated-price" id="subtotal">0,00 €</p>
@@ -119,6 +126,7 @@
                                 <button onclick="placeOrder()" id="order" class="order-btn">Buy now </button>
                             </div>
                         </div>
+
                     </div>
                 </section>
             </aside>
@@ -130,7 +138,7 @@
                 <a href="#"><img src="./assets/icons/home.svg" alt="home-icon"></a>
                 <a href="#"><img src="./assets/icons/Profile.svg" alt="profile icon"></a>
                 <a href="#"><img src="./assets/icons/orders.svg" alt="orders-icon"></a>
-                <a href="#"><img src="./assets/icons/basket.svg" alt="basket-icon"></a>
+                <button onclick="openBasket()"><img src="./assets/icons/basket.svg" alt="basket-icon"></button>
             </div>
         </nav>
 
@@ -164,9 +172,6 @@
 
         </section>
     </footer>
-
-
-
 
 </body>
 

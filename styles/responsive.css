@@ -12,8 +12,10 @@
 
 @media(max-width: 900px) {
 
-    nav {
-        height: 100%;
+    .content-wrapper {
+        margin: 0;
+        width: 100%;
+        ;
     }
 
     .nav-bar {
@@ -41,25 +43,43 @@
     }
 
     .splitt_view_container {
-        display: block;
-        width: 100%;
+        display: flex;
+        max-width: 100%;
+        justify-content: center;
     }
 
     .seperator-content {
-        padding: 0;
         justify-content: flex-start;
         background-color: #e76c1f;
         color: white;
     }
 
     .category-banner {
-        height: auto;
-        margin: 15px 0 10px 0;
         width: 100%;
     }
 
     .category-banner::before {
         display: none;
+    }
+
+    .product-list {
+        padding: 0;
+    }
+
+
+    /* basket */
+    
+    .basket-container {
+        position: fixed;
+        justify-content: center;
+        border-radius: 16px;
+        top: 20%;
+
+    }
+
+    .basket-wrapper{
+        border-radius: 16px;
+        justify-content: center;
     }
 
 }
