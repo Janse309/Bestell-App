@@ -10,7 +10,7 @@ function init() {
     renderDishes();
     renderBasket();
 
-    if (basket.length > 0) {
+    if (basket.length > 0 && window.innerWidth > 1000) {
         openBasket();
     }
 }
@@ -71,6 +71,10 @@ function addToBasket(index) {
     saveItemToLocalStorage();
     renderBasket();
     renderDishes();
+
+    if (window.innerWidth > 1000) {
+        openBasket();
+    }
 }
 
 function getBasketStatus(dishName) {
@@ -99,19 +103,11 @@ function changeAmount(index, change) {
 }
 
 function openBasket() {
-    document.getElementById('basket-modal').classList.remove('d_none');
-
+    basketModal.classList.remove('d_none');
     const isEmpty = basket.length === 0;
+
     document.getElementById('totals').classList.toggle('d_none', isEmpty);
     document.getElementById('empty-basket').classList.toggle('d_none', !isEmpty);
-
-    // if (basket.length === 0) {
-    //     document.getElementById('totals').classList.add('d_none');
-    //     document.getElementById('empty-basket').classList.remove('d_none');
-    // } else {
-    //     document.getElementById('totals').classList.remove('d_none');
-    //     document.getElementById('empty-basket').classList.add('d_none');
-    // }
 }
 
 function closeBasket() {
@@ -124,8 +120,9 @@ function closeBasket() {
 
 document.onkeydown = function (event) {
     if (event.key === "Escape") {
-        basketModal && !basketModal.classList.contains('d_none')
-        closeBasket();
+        if (basketModal && !basketModal.classList.contains('d_none')) {
+            closeBasket();
+        }
     }
 }
 

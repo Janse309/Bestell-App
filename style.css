@@ -2,7 +2,7 @@
     display: none !important;
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
@@ -34,7 +34,8 @@ body{
     align-items: center;
     justify-content: flex-end;
     height: auto;
-    position: relative; /* Dies ist der neue Ankerpunkt für .burger-img */
+    position: relative;
+    /* Dies ist der neue Ankerpunkt für .burger-img */
 }
 
 .hero-img {
@@ -51,16 +52,19 @@ body{
     height: 200px;
     width: 200px;
     object-fit: cover;
-    z-index: 10; /* Optional: Um sicherzugehen, dass es über dem Hero-Bild liegt */
-    
+    z-index: 10;
+    /* Optional: Um sicherzugehen, dass es über dem Hero-Bild liegt */
+
     /* POSITIONIERUNG: */
-    left: 50%;          /* Positioniert die linke Kante des Logos in der Mitte des Containers */
-    transform: translateX(-50%); /* Verschiebt das Logo um 50% seiner eigenen Breite nach links, um es perfekt zu zentrieren */
+    left: 50%;
+    /* Positioniert die linke Kante des Logos in der Mitte des Containers */
+    transform: translateX(-50%);
+    /* Verschiebt das Logo um 50% seiner eigenen Breite nach links, um es perfekt zu zentrieren */
     bottom: -100px;
 }
 
 .hero-headline-section {
-    margin: 64px 0;
+    margin-top: 72px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,7 +138,6 @@ h1 {
     display: flex;
     align-items: center;
     margin-top: 40px;
-    margin-bottom: 40px;
     position: relative;
     z-index: 1;
     background-color: #e76c1f;
@@ -155,8 +158,10 @@ h1 {
     display: flex;
     align-items: center;
     gap: 16px;
-    width: 100%;             /* Nutzt die vollen 1440px des Wrappers */
-    padding: 0 20px;         /* Gleiches Padding wie im Header/Rest der Seite! */
+    width: 100%;
+    /* Nutzt die vollen 1440px des Wrappers */
+    padding: 0 20px;
+    /* Gleiches Padding wie im Header/Rest der Seite! */
     color: white;
 }
 
@@ -176,7 +181,7 @@ h1 {
 .food-list {
     display: flex;
     flex-direction: column;
-    padding: 40px 0;
+    margin-top: 40px;
     gap: 24px;
 }
 
@@ -201,8 +206,15 @@ h1 {
 }
 
 .dish-image-container {
-    border-radius: 12px;
+    border-radius: 16px;
     margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dish-image-container img {
+    border-radius: 16px;
 }
 
 .dish-information-container {
@@ -254,4 +266,3 @@ h1 {
 .page-footer-content a {
     color: #FDEADC;
 }
-
