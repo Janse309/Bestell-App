@@ -140,10 +140,6 @@ function placeOrder() {
     }, 3000);
 }
 
-function addTrashContainer() {
-    document.getElementById('trash').classList.remove('d_none');
-}
-
 function openDialog() {
     dialog.showModal();
 }
