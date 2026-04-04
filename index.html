@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./styles/dialog.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <script src="./scripts/db.js" defer></script>
     <script src="./scripts/template.js" defer></script>
     <script src="script.js" defer></script>
@@ -22,7 +23,7 @@
 
 <body onload="init()">
     <header class="page-header">
-        <section class="header-content content-wrapper">
+        <section class="header-content content-wrapper wrapper-mobile">
             <div>
                 <img src="./assets/img/main-logo.svg" alt="Logo">
             </div>
@@ -62,7 +63,7 @@
 
                 <section class="food-container" id="burger-section">
                     <div class="category-banner">
-                        <div class="seperator-content content-wrapper">
+                        <div class="seperator-content content-wrapper wrapper-mobile">
                             <img src="./assets/img/burger_seperator.svg" alt="Burger">
                             <h2>Burger&Sandwiches</h2>
                         </div>
@@ -92,6 +93,7 @@
                 </section>
 
             </section>
+
 
             <aside id="basket-modal" class="d_none basket-container">
                 <section class="basket-wrapper">
@@ -123,6 +125,15 @@
 
         </section>
 
+        <nav class="nav-bar">
+            <div class="nav-bar-styling">
+                <a href="#"><img src="./assets/icons/home.svg" alt="home-icon"></a>
+                <a href="#"><img src="./assets/icons/Profile.svg" alt="profile icon"></a>
+                <a href="#"><img src="./assets/icons/orders.svg" alt="orders-icon"></a>
+                <a href="#"><img src="./assets/icons/basket.svg" alt="basket-icon"></a>
+            </div>
+        </nav>
+
         <div class="dialog-wrapper">
             <dialog id="dialog">
                 <div class="overlay">
@@ -141,14 +152,9 @@
             </dialog>
         </div>
 
-        <nav class="nav-bar">
-            <a href="#">hihih<img src="./assets/icons/home.svg" alt="home-icon"></a>
-            <a href="#"><img src="./assets/icons/Profile.svg" alt="profile icon"></a>
-            <a href="#"><img src="./assets/icons/orders.svg" alt="orders-icon"></a>
-            <a href="#"><img src="./assets/icons/basket.svg" alt="basket-icon"></a>
-        </nav>
-    </main>
 
+
+    </main>
 
     <footer class="page-footer">
         <section class="page-footer-content">

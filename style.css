@@ -34,7 +34,6 @@ body{
     align-items: center;
     justify-content: flex-end;
     height: auto;
-    position: relative;
 }
 
 .hero-img {
@@ -110,12 +109,16 @@ h1 {
     font-size: 24px;
     padding: 20px;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .food-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
 }
 
 .category-banner {
@@ -130,7 +133,7 @@ h1 {
 }
 
 .category-banner::before{
-        content: "";
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -244,28 +247,3 @@ h1 {
     color: #FDEADC;
 }
 
-.nav-bar{
-    position: absolute;
-    top: 0;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-    width: 100%;
-    max-width: 375px;
-    height: 78px;
-    background-color: #363534;
-    border-radius: 0 0 16px 16px;
-    z-index: 1000;
-}
-
-/* @media(max-width: 800px){
-    .nav-bar{
-        display: flex;
-    }
-
-    body {
-        padding-bottom: 80px; /* Platzhalter für die Nav-Bar */
-    /* } */
-/* } */ 
