@@ -1,5 +1,6 @@
 let basket = JSON.parse(localStorage.getItem("basket")) || [];
 const dialog = document.getElementById('dialog');
+let basketModal = document.getElementById('basket-modal');
 let burgerList = document.getElementById('burger-list');
 let pizzaList = document.getElementById('pizza-list');
 let salatList = document.getElementById('salat-list');
@@ -115,9 +116,16 @@ function openBasket() {
 
 function closeBasket() {
     if (basket.length === 0) {
-        document.getElementById('basket-modal').classList.add('d_none');
+        basketModal.classList.add('d_none');
     } else {
-        document.getElementById('basket-modal').classList.remove('d_none');
+        basketModal.classList.remove('d_none');
+    }
+}
+
+document.onkeydown = function (event) {
+    if (event.key === "Escape") {
+        basketModal && !basketModal.classList.contains('d_none')
+        closeBasket();
     }
 }
 
