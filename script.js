@@ -71,7 +71,7 @@ function addToBasket(index) {
     saveItemToLocalStorage();
     renderBasket();
     renderDishes();
-
+// add openBasket function 
     if (window.innerWidth > 1000) {
         openBasket();
     }
