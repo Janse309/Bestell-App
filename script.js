@@ -10,7 +10,7 @@ function init() {
     renderDishes();
     renderBasket();
 
-    if (basket.length > 0 && window.innerWidth > 1000) {
+    if (basket.length > 0 && window.innerWidth > 900) {
         openBasket();
     }
 }
@@ -58,7 +58,7 @@ function renderTotals() {
 
 function addToBasket(index) {
     let dish = dishes[index];
-    let foundItem = basket.find((item) => item.name === dish.name)
+    let foundItem = basket.find((item) => item.name === dish.name);
     if (foundItem) {
         foundItem.amount++;
     } else {
@@ -71,7 +71,6 @@ function addToBasket(index) {
     saveItemToLocalStorage();
     renderBasket();
     renderDishes();
-// add openBasket function 
     if (window.innerWidth > 1000) {
         openBasket();
     }

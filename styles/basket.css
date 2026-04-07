@@ -1,31 +1,30 @@
 .basket-container {
-    width: 440px;            /* Feste Breite für den Warenkorb */
-    position: sticky;
+    width: 440px;
+    position: absolute;
+    right: 0;
     top: 0;
+    bottom: 0;
     z-index: 10;
-    height: 100%;
 }
 
 .basket-wrapper {
+    position: sticky;
+    top: 16px;
     display: flex;
-    align-items: flex-start;
-    top: 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    flex-direction: column;
+    /* Falls der Inhalt untereinander soll */
     border-radius: 32px 0 0 32px;
     background-color: #363534;
+    padding: 16px;
 }
 
 .basket {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 640px;
+    height: 794px;
     width: 400px;
     top: 0;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, .35) rgba(0, 0, 0, .15);
     background-color: #363534;
     color: white;
     padding: 0 16px 16px 24px;
@@ -35,11 +34,14 @@
     font-size: 20px;
 }
 
-#basket-list{
+#basket-list {
     display: flex;
     flex-direction: column;
     width: 100%;
     flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, .35) rgba(0, 0, 0, .15);
 }
 
 .basket-headline {
@@ -51,14 +53,14 @@
     color: #FDEADC;
 }
 
-.empty-basket{
+.empty-basket {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
 
-.empty-basket div{
+.empty-basket div {
     padding-top: 64px;
 }
 
@@ -79,17 +81,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
-.basket-item-details h3{
+.basket-item-details h3 {
     font-size: 20px;
 }
 
 .basket-controls {
     display: flex;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
 }
 
 .basket-controls h3 {
@@ -130,7 +132,7 @@
     justify-content: space-between;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
 
