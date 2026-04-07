@@ -269,3 +269,7 @@ h1 {
 footer{
     width: 100%;
 }
+
+.nav-bar{
+    display: none;
+}
