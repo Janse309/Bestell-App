@@ -171,7 +171,6 @@
         width: 100%;
         object-fit: cover;
         object-position: 100% 70%;
-        background-image: url(../assets/img/veggie_mushroom.jpg);
     }
 
     .dish-information-container h3 {

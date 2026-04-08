@@ -71,7 +71,7 @@ function addToBasket(index) {
     saveItemToLocalStorage();
     renderBasket();
     renderDishes();
-    if (window.innerWidth > 1000) {
+    if (window.innerWidth > 900) {
         openBasket();
     }
 }
@@ -101,12 +101,20 @@ function changeAmount(index, change) {
     renderDishes();
 }
 
-function openBasket() {
-    basketModal.classList.remove('d_none');
+function isEmpty() {
     const isEmpty = basket.length === 0;
-
     document.getElementById('totals').classList.toggle('d_none', isEmpty);
     document.getElementById('empty-basket').classList.toggle('d_none', !isEmpty);
+}
+
+function openBasket() {
+    basketModal.classList.remove('d_none');
+    isEmpty();
+}
+
+function openMobileBasket() {
+    basketModal.classList.toggle('d_none');
+    isEmpty();
 }
 
 function closeBasket() {
@@ -150,7 +158,10 @@ function closeDialog() {
 
 // basket mit button(preis) ergänzen
 // responsive
-// Warenkorb in die Content Begrenzung einfügen
+// Warenkorb in die Content Begrenzung einfügen!!!
 // Problem mit dem Button und dem Minus und Plus beheben
-
+// Responsive Warenkorb immer mit ESC schließen können
 // bessere Bilder rendern
+// addToBasket function: auf weniger als 14 Zeilen kompremieren
+
+// kopiervorlage für neue Projekte erstellen!
