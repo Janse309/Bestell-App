@@ -109,7 +109,6 @@ function isEmpty() {
 
 function openBasket() {
     basketModal.classList.remove('d_none');
-    isEmpty();
 }
 
 function openMobileBasket() {
