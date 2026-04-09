@@ -54,6 +54,7 @@ function renderTotals() {
 
     document.getElementById('subtotal').innerHTML = `${subtotal.toFixed(2).replace('.', ',')} €`;
     document.getElementById('total').innerHTML = `${total.toFixed(2).replace('.', ',')} €`;
+    //document.getElementById('order').innerHTML = `${total.toFixed(2).replace('.', ',')} €`;
 }
 
 function addToBasket(index) {
