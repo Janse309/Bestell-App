@@ -9,6 +9,7 @@ function init() {
     getItemFromLocalStorage();
     renderDishes();
     renderBasket();
+    updateMobileBasketCount();
 
     if (basket.length > 0 && window.innerWidth > 900) {
         openBasket();
@@ -64,17 +65,13 @@ function addToBasket(index) {
         foundItem.amount++;
     } else {
         basket.push({
-            "name": dish.name,
-            "price": Number(dish.price),
-            "amount": 1
-        });
+            "name": dish.name, "price": Number(dish.price), "amount": 1});
     }
     saveItemToLocalStorage();
     renderBasket();
     renderDishes();
-    if (window.innerWidth > 900) {
-        openBasket();
-    }
+    updateMobileBasketCount();
+    if (window.innerWidth > 900) openBasket();
 }
 
 function getBasketStatus(dishName) {
@@ -88,6 +85,7 @@ function deleteItem(index) {
     saveItemToLocalStorage();
     renderBasket();
     renderDishes();
+    updateMobileBasketCount();
     closeBasket();
 }
 
@@ -100,6 +98,23 @@ function changeAmount(index, change) {
     saveItemToLocalStorage();
     renderBasket();
     renderDishes();
+}
+
+// function updateMobileBasketCount() {
+//     if (basket.length <= 1) {
+//         document.getElementById('mobile-basket-count').innerHTML = `${item.amount}`;
+//     }    
+// }
+
+function updateMobileBasketCount() {
+    let countRef = document.getElementById('mobile-basket-count');
+
+    let totalItems = 0;
+    basket.forEach(item => {
+        totalItems += item.amount;
+    });
+
+    countRef.innerHTML = totalItems;
 }
 
 function isEmpty() {
@@ -152,7 +167,7 @@ function openDialog() {
 }
 
 function closeDialog() {
-    dialog.close(); // Das schließt das HTML-Dialog-Element
+    dialog.close();
 }
 
 
@@ -160,7 +175,6 @@ function closeDialog() {
 // Warenkorb in die Content Begrenzung einfügen!!!
 // Problem mit dem Button und dem Minus und Plus beheben
 // Responsive Warenkorb immer mit ESC schließen können
-// bessere Bilder rendern
 // addToBasket function: auf weniger als 14 Zeilen kompremieren
 
 // kopiervorlage für neue Projekte erstellen!

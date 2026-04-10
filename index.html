@@ -34,7 +34,7 @@
     </header>
 
     <main>
-        
+
         <section class="hero-section">
             <div class="hero-image-content content-wrapper">
                 <img class="hero-img" src="./assets/img/hero.jpg" alt="hero-image">
@@ -51,7 +51,7 @@
                     <img src="./assets/icons/star_rate.svg" alt="rate">
                     <img src="./assets/icons/fith_star.svg" alt="rate">
                     <span>4,7 (549)</span>
-                </span>                
+                </span>
             </div>
             <h3 class="headline-description">The best of Burgers, Pizza, and Greens, all in one great place.</h3>
         </section>
@@ -75,7 +75,7 @@
                         <div class="seperator-content content-wrapper">
                             <img src="./assets/img/pizza_seperator.svg" alt="Burger">
                             <h2>Pizza <span>(30cm)</span></h2>
-                            
+
                         </div>
                     </div>
                     <div class="food-list content-wrapper" id="pizza-list"></div>
@@ -151,8 +151,6 @@
             </dialog>
         </div>
 
-
-
     </main>
 
     <footer class="page-footer">
@@ -169,7 +167,10 @@
             <a href="#"><img src="./assets/icons/home.svg" alt="home-icon"></a>
             <img src="./assets/icons/Profile.svg" alt="profile icon">
             <img src="./assets/icons/orders.svg" alt="orders-icon">
-            <button onclick="openMobileBasket()"><img src="./assets/icons/basket.svg" alt="basket-icon"></button>
+            <div class="icon-wrapper">
+                <button onclick="openMobileBasket()"><img src="./assets/icons/basket.svg" alt="basket-icon"></button>
+                <span id="mobile-basket-count" class="count-cart">0</span>
+            </div>
         </div>
     </nav>
 
