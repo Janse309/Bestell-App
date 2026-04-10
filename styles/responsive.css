@@ -54,11 +54,6 @@
         font-size: 32px;
     }
 
-    .content-wrapper {
-        margin: 0;
-        width: 100%;
-    }
-
     .splitt_view_container {
         display: flex;
         max-width: 100%;
@@ -71,7 +66,6 @@
     }
 
     .category-banner {
-        width: 100%;
         padding-right: 24px;
         padding-left: 24px;
     }
@@ -150,10 +144,36 @@
 
 @media(max-width: 768px) {
 
+    .dish-headline{
+        width: 100%;
+    }
 
+    .meal-container {
+        width: 335px;
+        height: 270px;
+    }
+
+    .category-banner {
+        justify-content: center;
+        align-items: center;
+        margin-top: 64px;
+        padding-bottom: 48px;
+        padding-top: 24px;
+    }
 
     .seperator-content {
-        justify-content: center;
+        width: 375px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .seperator-content h2 {
+        font-size: 30px;
+    }
+
+    .seperator-content img {
+        height: 60px;
+        width: 58px;
     }
 
     .meal-container {
@@ -166,8 +186,12 @@
         margin-right: 0;
     }
 
+    .dish-card {
+        justify-content: center;
+    }
+
     .dish-image-container img {
-        height: 300px;
+        height: 86px;
         width: 100%;
         object-fit: cover;
         object-position: 100% 70%;

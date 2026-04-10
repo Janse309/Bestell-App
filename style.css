@@ -168,6 +168,10 @@ h1 {
     font-size: 40px;
 }
 
+.seperator-content span{
+    font-weight: normal;
+}
+
 .seperator-content p {
     font-size: 40px;
 }
