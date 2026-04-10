@@ -92,8 +92,8 @@
     }
 
     .mobile-add-btn-container {
-        text-align: center;
         display: flex;
+        text-align: center;
         flex-direction: column-reverse;
         gap: 8px;
     }
@@ -156,21 +156,19 @@
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 732px) {
 
     .dish-headline {
         width: 100%;
     }
 
-    .meal-container {
-        width: 335px;
-        height: 270px;
+    .burger-mobile-banner{
+        margin-top: 64px;
     }
 
     .category-banner {
         justify-content: center;
         align-items: center;
-        margin-top: 64px;
         padding-bottom: 48px;
         padding-top: 24px;
     }
@@ -208,7 +206,7 @@
 
     .dish-image-container img {
         height: 86px;
-        width: 100%;
+        width: 315px;
         object-fit: cover;
         object-position: 100% 70%;
     }
@@ -229,5 +227,9 @@
 
     .basket-container {
         z-index: 100;
+    }
+
+    .page-footer-content{
+        flex-direction: column;
     }
 }

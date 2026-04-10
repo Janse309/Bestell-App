@@ -171,7 +171,7 @@ function closeDialog() {
 }
 
 
-// responsive
+// basket responsive
 // Warenkorb in die Content Begrenzung einfügen!!!
 // Problem mit dem Button und dem Minus und Plus beheben
 // Responsive Warenkorb immer mit ESC schließen können
