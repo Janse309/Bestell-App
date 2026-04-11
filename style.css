@@ -25,6 +25,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 128px;
+    padding: 0 24px;
 }
 
 .hero-image-content {
@@ -34,7 +35,6 @@ body {
     justify-content: flex-end;
     height: auto;
     position: relative;
-    /* Dies ist der neue Ankerpunkt für .burger-img */
 }
 
 .hero-img {
@@ -45,18 +45,12 @@ body {
 
 .burger-img {
     position: absolute;
-    /* Höhe und Breite sind gut */
     height: 200px;
     width: 200px;
     object-fit: cover;
     z-index: 10;
-    /* Optional: Um sicherzugehen, dass es über dem Hero-Bild liegt */
-
-    /* POSITIONIERUNG: */
     left: 50%;
-    /* Positioniert die linke Kante des Logos in der Mitte des Containers */
     transform: translateX(-50%);
-    /* Verschiebt das Logo um 50% seiner eigenen Breite nach links, um es perfekt zu zentrieren */
     bottom: -100px;
 }
 

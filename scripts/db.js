@@ -55,7 +55,6 @@ let dishes = [
         "indigredients": "Chicken, Mozzarella, Gorgonzola, Fontina,  Parmigiano Reggiano",
         "image": "./assets/img/quattro-formaggi-with-chicken.jpg",
     },
-    // Salat
     {
         "category": "Salad",
         "name": "Warm beef arugula salad",
