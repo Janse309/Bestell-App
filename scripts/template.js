@@ -2,10 +2,7 @@ function getDishTemplate(index) {
     let dish = dishes[index]
     return `
     <div class="dish-card">
-        <div class="meal-container">
-            <div class="dish-image-container">
-                <img src="${dish.image}" alt="${dish.name}">
-            </div>
+                <img class="dish-image" src="${dish.image}" alt="${dish.name}">
             <div class="dish-information-container">
                 <h3 class="dish-headline">${dish.name}</h3>
                 <p class="dish-description">${dish.indigredients}</p>
@@ -17,7 +14,6 @@ function getDishTemplate(index) {
                 <button onclick="addToBasket(${index})" class="add-btn">Add to basket</button>
                 </div>
             </div>
-        </div>
     </div>
     `;
 }

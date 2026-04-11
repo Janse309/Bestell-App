@@ -15,6 +15,7 @@ body {
 .content-wrapper {
     margin: 0px auto;
     max-width: 1440px;
+    position: relative;
 }
 
 .header-content {
@@ -104,11 +105,13 @@ h1 {
 
 .splitt_view_container {
     display: flex;
-    justify-content: space-between; /* Verteilt Liste und Korb */
+    justify-content: space-between;
+    /* Verteilt Liste und Korb */
     align-items: flex-start;
     flex-direction: row;
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 
 .product-list {
@@ -169,7 +172,7 @@ h1 {
     font-size: 40px;
 }
 
-.seperator-content span{
+.seperator-content span {
     font-weight: normal;
 }
 
@@ -187,6 +190,7 @@ h1 {
     margin-top: 40px;
     margin-bottom: 40px;
     gap: 24px;
+    padding: 20px;
 }
 
 .dish-headline {
@@ -195,30 +199,19 @@ h1 {
 
 .dish-card {
     display: flex;
-    align-items: center;
-    padding: 0 20px;
-    height: auto;
-    width: 1000px;
-}
-
-.meal-container {
-    display: flex;
-    background-color: #FDEADC;
-    padding: 20px;
+    flex-direction: row;
+    background-color: #fdeadc;
     border-radius: 12px;
-    width: 100%;
+    gap: 10px;
+    padding: 15px;
+    align-items: stretch;
 }
 
-.dish-image-container {
-    border-radius: 16px;
-    margin-right: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dish-image-container img {
-    border-radius: 16px;
+.dish-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .dish-information-container {
@@ -271,10 +264,10 @@ h1 {
     color: #FDEADC;
 }
 
-footer{
+footer {
     width: 100%;
 }
 
-.nav-bar{
+.nav-bar {
     display: none;
 }

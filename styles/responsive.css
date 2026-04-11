@@ -1,3 +1,18 @@
+@media(max-width:1200px) {
+
+    .mobile-add-btn-container {
+        display: flex;
+        flex-direction: column;
+        /* width: 100px; */
+        gap: 8px;
+    }
+
+    .added-badge{
+        text-align: center;
+    }
+}
+
+
 @media(max-width: 1024px) {
 
     .header-content {
@@ -26,8 +41,14 @@
         width: 38%;
     }
 
+    .mobile-add-btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .food-list {
-        padding: 24px;
+        margin: 24px 8px;
     }
 
     .food-list-container {
@@ -78,10 +99,6 @@
         padding: 0;
     }
 
-    .meal-container {
-        padding: 12px;
-    }
-
     .dish-price {
         justify-content: flex-start;
         width: 38%;
@@ -93,7 +110,6 @@
 
     .mobile-add-btn-container {
         display: flex;
-        text-align: center;
         flex-direction: column-reverse;
         gap: 8px;
     }
@@ -147,7 +163,8 @@
         position: fixed;
         justify-content: center;
         border-radius: 16px;
-        top: 20%;
+        top: 15%;
+        left: 15%;
     }
 
     .basket-wrapper {
@@ -162,7 +179,7 @@
         width: 100%;
     }
 
-    .burger-mobile-banner{
+    .burger-mobile-banner {
         margin-top: 64px;
     }
 
@@ -189,10 +206,11 @@
         width: 58px;
     }
 
-    .meal-container {
+    .dish-card {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .dish-image-container {
@@ -201,11 +219,10 @@
 
     .dish-card {
         justify-content: center;
-        padding: 0;
     }
 
-    .dish-image-container img {
-        height: 86px;
+    .dish-image {
+        height: 95px;
         width: 315px;
         object-fit: cover;
         object-position: 100% 70%;
@@ -220,16 +237,34 @@
     }
 
     .dish-price {
-        width: 100%;
         justify-content: space-between;
+        display: flex;
         flex-direction: row;
+        width: 100%;
+    }
+
+    .mobile-add-btn-container{
+        flex-direction: row-reverse;
+        width: 200px;
     }
 
     .basket-container {
         z-index: 100;
     }
 
-    .page-footer-content{
+    .page-footer-content {
         flex-direction: column;
+    }
+}
+
+@media(max-width:400px){
+    .dish-image{
+        width: unset;
+    }
+
+    .basket-container{
+        left: unset;
+        right: unset;
+        /* hier noch bearbeiten */
     }
 }

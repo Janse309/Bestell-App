@@ -16,6 +16,15 @@ function init() {
     }
 }
 
+function toggleMobileBasket() {
+
+    if (!basketModal) return;
+
+    const isOpen = basketModal.classList.toggle('show-mobile-basket');
+    
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
 function saveItemToLocalStorage() {
     localStorage.setItem("basket", JSON.stringify(basket));
 }
@@ -101,12 +110,6 @@ function changeAmount(index, change) {
     renderDishes();
 }
 
-// function updateMobileBasketCount() {
-//     if (basket.length <= 1) {
-//         document.getElementById('mobile-basket-count').innerHTML = `${item.amount}`;
-//     }    
-// }
-
 function updateMobileBasketCount() {
     let countRef = document.getElementById('mobile-basket-count');
 
@@ -176,6 +179,5 @@ function closeDialog() {
 // Warenkorb in die Content Begrenzung einfügen!!!
 // Problem mit dem Button und dem Minus und Plus beheben
 // Responsive Warenkorb immer mit ESC schließen können
-// addToBasket function: auf weniger als 14 Zeilen kompremieren
 
 // kopiervorlage für neue Projekte erstellen!

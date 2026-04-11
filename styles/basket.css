@@ -1,6 +1,6 @@
 .basket-container {
     width: 435px;
-    position: fixed;
+    position: sticky;
     right: 0;
     top: 0;
     bottom: 0;
@@ -12,14 +12,14 @@
     display: flex;
     flex-direction: column;
     top: 0;
-    /* Falls der Inhalt untereinander soll */
     border-radius: 32px 0 0 32px;
     background-color: #363534;
     padding: 16px;
+    width: 100%;
+    height: 745px;
 }
 
 .basket {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
