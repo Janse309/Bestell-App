@@ -69,15 +69,6 @@ function placeOrder() {
     }, 3000);
 }
 
-function saveItemToLocalStorage() {
-    localStorage.setItem("basket", JSON.stringify(basket));
-}
-
-function getItemFromLocalStorage() {
-    const saved = localStorage.getItem("basket");
-    basket = saved ? JSON.parse(saved) : [];
-}
-
 function renderDishes() {
     const containers = { "Burger & Sandwiches": burgerList, "Pizza": pizzaList, "Salad": salatList };
     Object.values(containers).forEach(list => list.innerHTML = "");
@@ -111,16 +102,6 @@ function renderTotals() {
     document.getElementById('order').innerHTML = `Buy now (${total.toFixed(2).replace('.', ',')} €)`;
 }
 
-function getBasketStatus(dishName) {
-    const item = basket.find((index) => index.name === dishName);
-    return item && item.amount > 0
-        ? `<span class="added-badge">Added ${item.amount}</span>` : "";
-}
-
-
-
-
-
 function updateMobileBasketCount() {
     let countRef = document.getElementById('mobile-basket-count');
 
@@ -131,19 +112,14 @@ function updateMobileBasketCount() {
     countRef.innerHTML = totalItems;
 }
 
-function isEmpty() {
-    const isEmpty = basket.length === 0;
-    document.getElementById('totals').classList.toggle('d_none', isEmpty);
-    document.getElementById('empty-basket').classList.toggle('d_none', !isEmpty);
+function getBasketStatus(dishName) {
+    const item = basket.find((index) => index.name === dishName);
+    return item && item.amount > 0
+        ? `<span class="added-badge">Added ${item.amount}</span>` : "";
 }
 
 function openBasket() {
     basketModal.classList.remove('d_none');
-}
-
-function openMobileBasket() {
-    basketModal.classList.toggle('d_none');
-    isEmpty();
 }
 
 function closeBasket() {
@@ -154,12 +130,15 @@ function closeBasket() {
     }
 }
 
-document.onkeydown = function (event) {
-    if (event.key === "Escape") {
-        if (basketModal && !basketModal.classList.contains('d_none')) {
-            closeBasket();
-        }
-    }
+function openMobileBasket() {
+    basketModal.classList.toggle('d_none');
+    isEmpty();
+}
+
+function isEmpty() {
+    const isEmpty = basket.length === 0;
+    document.getElementById('totals').classList.toggle('d_none', isEmpty);
+    document.getElementById('empty-basket').classList.toggle('d_none', !isEmpty);
 }
 
 function openDialog() {
@@ -170,12 +149,20 @@ function closeDialog() {
     dialog.close();
 }
 
+function saveItemToLocalStorage() {
+    localStorage.setItem("basket", JSON.stringify(basket));
+}
 
-// basket responsive
+function getItemFromLocalStorage() {
+    const saved = localStorage.getItem("basket");
+    basket = saved ? JSON.parse(saved) : [];
+}
 
-//basket im resposive positionieren
-// Warenkorb in die Content Begrenzung einfügen!!!
-// Problem mit dem Button und dem Minus und Plus beheben
-// Responsive Warenkorb immer mit ESC schließen können
+document.onkeydown = function (event) {
+    if (event.key === "Escape") {
+        if (basketModal && !basketModal.classList.contains('d_none')) {
+            closeBasket();
+        }
+    }
+}
 
-// kopiervorlage für neue Projekte erstellen!
