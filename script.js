@@ -160,6 +160,7 @@ function placeOrder() {
     renderDishes();
     closeBasket();
     openDialog();
+    updateMobileBasketCount();
 
     setTimeout(() => {
         closeDialog();
@@ -176,6 +177,8 @@ function closeDialog() {
 
 
 // basket responsive
+
+//basket im resposive positionieren
 // Warenkorb in die Content Begrenzung einfügen!!!
 // Problem mit dem Button und dem Minus und Plus beheben
 // Responsive Warenkorb immer mit ESC schließen können

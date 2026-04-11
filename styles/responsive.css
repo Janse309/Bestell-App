@@ -257,14 +257,29 @@
     }
 }
 
-@media(max-width:400px){
+@media(max-width:450px){
     .dish-image{
         width: unset;
     }
 
     .basket-container{
+        top: 15%;
         left: unset;
         right: unset;
+
         /* hier noch bearbeiten */
+    }
+
+    .basket-container{
+        width: 350px;
+    }
+
+    .basket{
+        height: 500px;
+        width: 100%;
+    }
+
+    .empty-basket{
+        text-align: center;
     }
 }
