@@ -1,5 +1,5 @@
-let basket = JSON.parse(localStorage.getItem("basket")) || [];
 const dialog = document.getElementById('dialog');
+let basket = JSON.parse(localStorage.getItem("basket")) || [];
 let basketModal = document.getElementById('basket-modal');
 let burgerList = document.getElementById('burger-list');
 let pizzaList = document.getElementById('pizza-list');
@@ -16,13 +16,57 @@ function init() {
     }
 }
 
-function toggleMobileBasket() {
+function addToBasket(index) {
+    let dish = dishes[index];
+    let foundItem = basket.find((item) => item.name === dish.name);
+    if (foundItem) {
+        foundItem.amount++;
+    } else {
+        basket.push({
+            "name": dish.name, "price": Number(dish.price), "amount": 1
+        });
+    }
+    saveItemToLocalStorage();
+    renderBasket();
+    renderDishes();
+    updateMobileBasketCount();
+    if (window.innerWidth > 900) openBasket();
+}
 
-    if (!basketModal) return;
+function changeAmount(index, change) {
+    basket[index].amount += change;
 
-    const isOpen = basketModal.classList.toggle('show-mobile-basket');
-    
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (basket[index].amount <= 0) {
+        basket.splice(index, 1);
+    }
+    updateMobileBasketCount();
+    saveItemToLocalStorage();
+    renderBasket();
+    renderDishes();
+}
+
+function deleteItem(index) {
+    basket.splice(index, 1);
+    saveItemToLocalStorage();
+    renderBasket();
+    renderDishes();
+    updateMobileBasketCount();
+    closeBasket();
+}
+
+function placeOrder() {
+    basket = [];
+    localStorage.removeItem("basket");
+
+    renderBasket();
+    renderDishes();
+    closeBasket();
+    openDialog();
+    updateMobileBasketCount();
+
+    setTimeout(() => {
+        closeDialog();
+    }, 3000);
 }
 
 function saveItemToLocalStorage() {
@@ -67,50 +111,15 @@ function renderTotals() {
     document.getElementById('order').innerHTML = `Buy now (${total.toFixed(2).replace('.', ',')} €)`;
 }
 
-function addToBasket(index) {
-    let dish = dishes[index];
-    let foundItem = basket.find((item) => item.name === dish.name);
-    if (foundItem) {
-        foundItem.amount++;
-    } else {
-        basket.push({
-            "name": dish.name, "price": Number(dish.price), "amount": 1
-        });
-    }
-    saveItemToLocalStorage();
-    renderBasket();
-    renderDishes();
-    updateMobileBasketCount();
-    if (window.innerWidth > 900) openBasket();
-}
-
-
 function getBasketStatus(dishName) {
     const item = basket.find((index) => index.name === dishName);
     return item && item.amount > 0
         ? `<span class="added-badge">Added ${item.amount}</span>` : "";
 }
 
-function deleteItem(index) {
-    basket.splice(index, 1);
-    saveItemToLocalStorage();
-    renderBasket();
-    renderDishes();
-    updateMobileBasketCount();
-    closeBasket();
-}
 
-function changeAmount(index, change) {
-    basket[index].amount += change;
 
-    if (basket[index].amount <= 0) {
-        basket.splice(index, 1);
-    }
-    updateMobileBasketCount();
-    saveItemToLocalStorage();
-    renderBasket();
-    renderDishes();
-}
+
 
 function updateMobileBasketCount() {
     let countRef = document.getElementById('mobile-basket-count');
@@ -151,21 +160,6 @@ document.onkeydown = function (event) {
             closeBasket();
         }
     }
-}
-
-function placeOrder() {
-    basket = [];
-    localStorage.removeItem("basket");
-
-    renderBasket();
-    renderDishes();
-    closeBasket();
-    openDialog();
-    updateMobileBasketCount();
-
-    setTimeout(() => {
-        closeDialog();
-    }, 3000);
 }
 
 function openDialog() {
