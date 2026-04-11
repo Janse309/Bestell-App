@@ -84,6 +84,7 @@ function addToBasket(index) {
     if (window.innerWidth > 900) openBasket();
 }
 
+
 function getBasketStatus(dishName) {
     const item = basket.find((index) => index.name === dishName);
     return item && item.amount > 0
@@ -117,7 +118,6 @@ function updateMobileBasketCount() {
     basket.forEach(item => {
         totalItems += item.amount;
     });
-
     countRef.innerHTML = totalItems;
 }
 

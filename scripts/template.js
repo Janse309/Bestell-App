@@ -1,7 +1,7 @@
 function getDishTemplate(index) {
-    let dish = dishes[index]
+    let dish = dishes[index];
     return `
-    <div class="dish-card">
+    <div class="dish-cart">
                 <img class="dish-image" src="${dish.image}" alt="${dish.name}">
             <div class="dish-information-container">
                 <h3 class="dish-headline">${dish.name}</h3>
@@ -20,7 +20,7 @@ function getDishTemplate(index) {
 
 function getBasketTemplate(item, index) {
     let totalItemPrice = item.price * item.amount;
-    let trashIcon = item.amount === 1 
+    let trashIcon = item.amount === 1
         ? `<button onclick="deleteItem()" class="trash-icon"><img src="./assets/icons/delete.svg" alt="Löschen"></button>` : `-`;
     let trashClass = item.amount > 1 ? "" : "d_none";
     return `

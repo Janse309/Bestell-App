@@ -1,32 +1,23 @@
-aside{
-    z-index: 100;
-}
-
-.basket-container {
-    width: 435px;
-    position: sticky;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
+/*
 .basket-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 0;
+    top: 0; 
     border-radius: 32px 0 0 32px;
     background-color: #363534;
     padding: 16px;
-}
+}*/
 
 .basket {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 700px;
-    width: 400px;
+    position: sticky;
+    right: 0;
     top: 0;
+    height: 745px;
+    width: 435px;
     background-color: #363534;
     color: white;
     padding: 0 16px 16px 24px;
@@ -34,12 +25,13 @@ aside{
     font-family: 'Palanquin', sans-serif;
     font-weight: 400;
     font-size: 20px;
+    z-index: 100;
 }
 
 #basket-list {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    
     flex: 1;
     overflow-y: auto;
     scrollbar-width: thin;
@@ -154,6 +146,6 @@ aside{
     font-family: 'Palanquin', sans-serif;
     font-weight: 700;
     border-radius: 16px;
-    font-size: 32px;
+    font-size: 30px;
     width: 100%;
 }

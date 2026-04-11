@@ -16,6 +16,7 @@ body {
     margin: 0px auto;
     max-width: 1440px;
     position: relative;
+    z-index: 1;
 }
 
 .header-content {
@@ -106,7 +107,6 @@ h1 {
 .splitt_view_container {
     display: flex;
     justify-content: space-between;
-    /* Verteilt Liste und Korb */
     align-items: flex-start;
     flex-direction: row;
     position: relative;
@@ -145,25 +145,12 @@ h1 {
     background-color: #e76c1f;
 }
 
-/* .category-banner::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -50%;
-    right: -50%;
-    background-color: #e76c1f;
-    z-index: -1;  
-} */
-
 .seperator-content {
     display: flex;
     align-items: center;
     gap: 16px;
     width: 100%;
-    /* Nutzt die vollen 1440px des Wrappers */
     padding: 0 20px;
-    /* Gleiches Padding wie im Header/Rest der Seite! */
     color: white;
 }
 
@@ -187,17 +174,19 @@ h1 {
 .food-list {
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin-top: 40px;
     margin-bottom: 40px;
     gap: 24px;
     padding: 20px;
+    max-width: 1000px;
 }
 
 .dish-headline {
     font-size: 24px;
 }
 
-.dish-card {
+.dish-cart {
     display: flex;
     flex-direction: row;
     background-color: #fdeadc;
