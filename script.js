@@ -106,6 +106,7 @@ function changeAmount(index, change) {
     if (basket[index].amount <= 0) {
         basket.splice(index, 1);
     }
+    updateMobileBasketCount();
     saveItemToLocalStorage();
     renderBasket();
     renderDishes();

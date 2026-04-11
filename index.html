@@ -3,20 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="An App for ordering Pizza, Burger and Salat.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell-App</title>
+    <link rel="canonical" href="index.html">
     <link rel="icon" href="./assets/icons/fav-icon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./styles/standart.css">
+    <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/basket.css">
-    <link rel="stylesheet" href="./styles/dialog.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="/styles/basket.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./styles/dialog.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./styles/responsive.css" media="print" onload="this.media='all'">
     <script src="./scripts/db.js" defer></script>
     <script src="./scripts/template.js" defer></script>
     <script src="script.js" defer></script>
 </head>
+<noscript>
+    <link rel="stylesheet" href="/styles/basket.css">
+    <link rel="stylesheet" href="./styles/dialog.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+</noscript>
 
 <body onload="init()">
     <header class="page-header">
@@ -25,7 +32,8 @@
                 <img src="./assets/img/main-logo.svg" alt="Logo">
             </div>
             <div>
-                <button aria-label="Platzhalter" class="hamburger-menu-btn"><img src="./assets/img/hamburger-menu.svg" alt="Menü"></button>
+                <button aria-label="Platzhalter" class="hamburger-menu-btn"><img src="./assets/img/hamburger-menu.svg"
+                        alt="Menü"></button>
             </div>
         </section>
     </header>
@@ -116,7 +124,8 @@
                             <p class="bold">Gesamt:</p>
                             <p class="calculated-price bold" id="total"></p>
                         </div>
-                        <button aria-label="Zahlungspflichtig bestellen" onclick="placeOrder()" id="order" class="order-btn"></button>
+                        <button aria-label="Zahlungspflichtig bestellen" onclick="placeOrder()" id="order"
+                            class="order-btn">Jetzt bestellen</button>
                     </div>
                 </div>
             </aside>
@@ -127,7 +136,8 @@
             <dialog id="dialog">
                 <div class="overlay">
                     <div class="x-btn-container">
-                        <button aria-label="schließen" onclick="closeDialog()"><img src="./assets/icons/close.svg" alt="close dialog"></button>
+                        <button aria-label="schließen" onclick="closeDialog()"><img src="./assets/icons/close.svg"
+                                alt="close dialog"></button>
                     </div>
 
                     <section class="dialog-section">
@@ -158,7 +168,8 @@
             <img src="./assets/icons/Profile.svg" alt="profile icon">
             <img src="./assets/icons/orders.svg" alt="orders-icon">
             <div class="icon-wrapper">
-                <button aria-label="Warenkorb öffnen" onclick="openMobileBasket()"><img src="./assets/icons/basket.svg" alt="basket-icon"></button>
+                <button aria-label="Warenkorb öffnen" onclick="openMobileBasket()"><img src="./assets/icons/basket.svg"
+                        alt="basket-icon"></button>
                 <span id="mobile-basket-count" class="count-cart">0</span>
             </div>
         </div>
