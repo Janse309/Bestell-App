@@ -1,6 +1,6 @@
 .basket-container {
     width: 435px;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     bottom: 0;
@@ -8,7 +8,7 @@
 }
 
 .basket-wrapper {
-    position: sticky;
+    position: relative;
     display: flex;
     flex-direction: column;
     top: 0;
@@ -19,6 +19,7 @@
 }
 
 .basket {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

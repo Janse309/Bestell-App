@@ -65,7 +65,8 @@ function addToBasket(index) {
         foundItem.amount++;
     } else {
         basket.push({
-            "name": dish.name, "price": Number(dish.price), "amount": 1});
+            "name": dish.name, "price": Number(dish.price), "amount": 1
+        });
     }
     saveItemToLocalStorage();
     renderBasket();

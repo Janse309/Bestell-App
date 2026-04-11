@@ -104,8 +104,9 @@ h1 {
 
 .splitt_view_container {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between; /* Verteilt Liste und Korb */
     align-items: flex-start;
+    flex-direction: row;
     position: relative;
     z-index: 1;
 }
@@ -118,9 +119,9 @@ h1 {
     justify-content: center;
     color: #363634;
     font-size: 24px;
-    width: 100%;
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 
 .food-container {
