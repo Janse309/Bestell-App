@@ -1,10 +1,13 @@
+aside{
+    z-index: 100;
+}
+
 .basket-container {
     width: 435px;
     position: sticky;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 10;
 }
 
 .basket-wrapper {

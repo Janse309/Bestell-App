@@ -7,7 +7,7 @@
         gap: 8px;
     }
 
-    .added-badge{
+    .added-badge {
         text-align: center;
     }
 }
@@ -243,7 +243,7 @@
         width: 100%;
     }
 
-    .mobile-add-btn-container{
+    .mobile-add-btn-container {
         flex-direction: row-reverse;
         width: 200px;
     }
@@ -257,12 +257,14 @@
     }
 }
 
-@media(max-width:450px){
-    .dish-image{
+@media(max-width:450px) {
+    .dish-image {
         width: unset;
     }
 
-    .basket-container{
+    /* basket */
+
+    .basket-container {
         top: 15%;
         left: unset;
         right: unset;
@@ -270,16 +272,49 @@
         /* hier noch bearbeiten */
     }
 
-    .basket-container{
-        width: 350px;
+    .basket-container {
+        width: 300px;
     }
 
-    .basket{
-        height: 500px;
+    .basket {
+        height: 600px;
         width: 100%;
     }
 
-    .empty-basket{
+    .basket-headline {
+        padding-bottom: 8px;
+    }
+
+    .empty-basket {
         text-align: center;
     }
+
+    .basket-item {
+        padding: 8px;
+    }
+
+    .basket-item-details h3 {
+        font-size: 18px;
+    }
+    .basket-controls{
+        font-size: 16px;
+    }
+
+    .control-btn{
+        font-size: 16px;
+    }
+
+    .trash-icon{
+        align-items: flex-end;
+    }
+
+    .basket-text{
+        font-size: 18px;
+    }
+
+    .order-btn {
+        font-size: 26px;
+    }
+
+
 }

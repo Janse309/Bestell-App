@@ -33,7 +33,6 @@ dialog::backdrop {
     font-weight: 700;
     color: #FDEADC;
     animation: slideIn 0.3s ease-out;
-
 }
 
 dialog h2 {
@@ -80,4 +79,25 @@ dialog p {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@media(max-width: 450px) {
+
+    .dialog-wrapper {
+        z-index: 100;
+        width: 300px;
+    }
+
+    .dialog-section {
+        width: 100%;
+    }
+
+    .order-dialog h2{
+        font-size: 24px;
+    }
+
+    .order-dialog p {
+        font-size: 16px;
+    }
+
 }
