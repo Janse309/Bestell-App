@@ -1,0 +1,32 @@
+*{
+    text-decoration: none;
+    margin: 0;
+}
+
+h1{
+    color: #fdeadc;
+}
+
+body{
+    height: 100vh;
+    background-color: #fdeadc;
+}
+
+a{
+    color: white;
+    font-weight: bold;
+}
+
+.generator_results {
+    display: flex;
+    justify-content: center;
+}
+
+#generator_results_content{
+    font-family: 'Palanquin', sans-serif;
+    text-align: center;
+    background-color: #e76c1f;
+    color: #fdeadc;
+    width: 900px;
+    height: 1000px;
+}

@@ -16,8 +16,8 @@
 @media(max-width: 1024px) {
 
     .header-content {
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-right: 24px;
+        padding-left: 24px;
     }
 
     .content-wrapper {
@@ -26,11 +26,6 @@
 
     .dish-cart {
         width: 100%;
-    }
-
-    .header-content {
-        padding-right: 24px;
-        padding-left: 24px;
     }
 
     .dish-headline {
@@ -120,7 +115,7 @@
     }
 
     .nav-bar {
-        display: flex !important;
+        display: flex;
         align-items: center;
         position: sticky;
         bottom: 0;
@@ -265,17 +260,17 @@
         width: unset;
     }
 
-    .dish-price{
+    .dish-price {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
     }
 
-    .dish-price p{
+    .dish-price p {
         text-align: center;
     }
 
-    .mobile-add-btn-container{
+    .mobile-add-btn-container {
         flex-direction: column-reverse;
     }
 
@@ -283,8 +278,8 @@
 
     .basket {
         top: 15%;
-        left: unset;
-        right: unset;
+        left: auto;
+        right: auto;
         height: 600px;
         width: 300px;
         border-radius: 16px;
@@ -306,19 +301,20 @@
     .basket-item-details h3 {
         font-size: 18px;
     }
-    .basket-controls{
+
+    .basket-controls {
         font-size: 16px;
     }
 
-    .control-btn{
+    .control-btn {
         font-size: 16px;
     }
 
-    .trash-icon{
+    .trash-icon {
         align-items: flex-end;
     }
 
-    .basket-text{
+    .basket-text {
         font-size: 18px;
     }
 
@@ -327,4 +323,3 @@
     }
 
 }
-

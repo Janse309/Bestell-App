@@ -16,9 +16,6 @@
     <script src="./scripts/db.js" defer></script>
     <script src="./scripts/template.js" defer></script>
     <script src="script.js" defer></script>
-    <!-- <link rel="preload" href="./assets/fonts/palaquin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./assets/fonts/palaquin_400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./assets/fonts/palaquin_dark.woff2" as="font" type="font/woff2" crossorigin> -->
 </head>
 
 <body onload="init()">
@@ -28,7 +25,7 @@
                 <img src="./assets/img/main-logo.svg" alt="Logo">
             </div>
             <div>
-                <button class="hamburger-menu-btn"><img src="./assets/img/hamburger-menu.svg" alt="Menü"></button>
+                <button aria-label="Platzhalter" class="hamburger-menu-btn"><img src="./assets/img/hamburger-menu.svg" alt="Menü"></button>
             </div>
         </section>
     </header>
@@ -75,7 +72,6 @@
                         <div class="seperator-content content-wrapper">
                             <img src="./assets/img/pizza_seperator.svg" alt="Burger">
                             <h2>Pizza <span>(30cm)</span></h2>
-
                         </div>
                     </div>
                     <div class="food-list content-wrapper" id="pizza-list"></div>
@@ -120,7 +116,7 @@
                             <p class="bold">Gesamt:</p>
                             <p class="calculated-price bold" id="total"></p>
                         </div>
-                        <button onclick="placeOrder()" id="order" class="order-btn"></button>
+                        <button aria-label="Zahlungspflichtig bestellen" onclick="placeOrder()" id="order" class="order-btn"></button>
                     </div>
                 </div>
             </aside>
@@ -131,7 +127,7 @@
             <dialog id="dialog">
                 <div class="overlay">
                     <div class="x-btn-container">
-                        <button onclick="closeDialog()"><img src="./assets/icons/close.svg" alt="close dialog"></button>
+                        <button aria-label="schließen" onclick="closeDialog()"><img src="./assets/icons/close.svg" alt="close dialog"></button>
                     </div>
 
                     <section class="dialog-section">
@@ -150,7 +146,7 @@
     <footer class="page-footer">
         <section class="page-footer-content">
             <p>© 2025 BurgerHouse</p>
-            <a href="#">imprint</a>
+            <a href="./pages/impressum.html">imprint</a>
             <a href="#">Cookie Preferences</a>
 
         </section>
@@ -162,7 +158,7 @@
             <img src="./assets/icons/Profile.svg" alt="profile icon">
             <img src="./assets/icons/orders.svg" alt="orders-icon">
             <div class="icon-wrapper">
-                <button onclick="openMobileBasket()"><img src="./assets/icons/basket.svg" alt="basket-icon"></button>
+                <button aria-label="Warenkorb öffnen" onclick="openMobileBasket()"><img src="./assets/icons/basket.svg" alt="basket-icon"></button>
                 <span id="mobile-basket-count" class="count-cart">0</span>
             </div>
         </div>
