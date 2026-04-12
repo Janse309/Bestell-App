@@ -314,6 +314,11 @@
         align-items: flex-end;
     }
 
+    .basket{
+        top: 5%;
+        height: 500px;
+    }
+
     .basket-text {
         font-size: 18px;
     }
