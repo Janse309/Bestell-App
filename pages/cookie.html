@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+    <link rel="stylesheet" href="../styles/cookie.css">
+</head>
+
+<body>
+    <section class="cookie-styling">
+        <h1>Cookie Einstellungen</h1>
+
+        <p>Wir verwenden Cookies, um deine Erfahrung zu verbessern und personalisierte Inhalte anzuzeigen. Du kannst
+            auswählen, welche Cookies du akzeptierst.</p>
+
+
+
+        <form action="../index.html" method="get">
+            <label>
+                <input type="checkbox" name="essentiell" value="true" checked disabled>
+                Funktionale Cookies
+            </label>
+
+            <label>
+                <input type="checkbox" name="statistiken">
+                Statistiken
+            </label>
+
+            <label>
+                <input type="checkbox" name="marketing">
+                Marketing
+            </label>
+
+            <button type="submit">Bestätigen</button>
+        </form>
+    </section>
+
+</body>
+
+<script>
+    document.getElementById("myCheck").indeterminate = false;
+</script>
+
+</html>
